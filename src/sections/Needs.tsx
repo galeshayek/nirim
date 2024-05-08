@@ -62,16 +62,16 @@ const Needs = () => {
                 <h3 className="font-semibold">{t('needs.subtitle')}</h3>
                 <ul className="space-y-7">
                     <li>
-                        <p><span className="font-semibold">{t('needs.ul.li1.subtitle')}</span>{t('needs.ul.li1.text')}<Link to={'/educationalfacilities'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
+                        <p><span className="font-semibold">{t('needs.ul.li1.subtitle')}</span>{t('needs.ul.li1.text')}<Link to={'/educationalfacilities#'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
                     </li>
                     <li>
-                        <p><span className="font-semibold">{t('needs.ul.li2.subtitle')}</span>{t('needs.ul.li2.text')}<Link to={'/health'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
+                        <p><span className="font-semibold">{t('needs.ul.li2.subtitle')}</span>{t('needs.ul.li2.text')}<Link to={'/health#'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
                     </li>
                     <li>
-                        <p><span className="font-semibold">{t('needs.ul.li3.subtitle')}</span>{t('needs.ul.li3.text')}<Link to={'/community'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
+                        <p><span className="font-semibold">{t('needs.ul.li3.subtitle')}</span>{t('needs.ul.li3.text')}<Link to={'/community#'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
                     </li>
                     <li>
-                        <p><span className="font-semibold">{t('needs.ul.li4.subtitle')}</span>{t('needs.ul.li4.text')}<Link to={'/infrastructure'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
+                        <p><span className="font-semibold">{t('needs.ul.li4.subtitle')}</span>{t('needs.ul.li4.text')}<Link to={'/infrastructure#'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
                     </li>
                 </ul>
                 <div className="bg-primary p-2 max-md:-mx-10 flex flex-col gap-2 items-center">

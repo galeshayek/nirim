@@ -12,7 +12,7 @@ const Kibbutz = () => {
                     <h5 className="font-semibold text-2xl">{t('kibbutz.subtitle2')}</h5>
                     <p>{t('kibbutz.text')}</p>
                 </div>
-                <img className="size-fit md:size-4/12" src={photo18} alt={t('kibbutz.photoAlt')} />
+                <img className="size-fit aspect-square md:size-4/12" src={photo18} alt={t('kibbutz.photoAlt')} />
             </div>
         </section>
     )
