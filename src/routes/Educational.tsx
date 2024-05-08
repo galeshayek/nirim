@@ -14,16 +14,17 @@ const Educational = () => {
             </div>
             <p className="font-medium">{t('projects.educational.kinderGarden.text2')}</p>
         </ProjectCard>
+
         <ProjectCard>
             <h2 className="text-2xl">{t('projects.educational.activities.title')}</h2>
             <p>{t('projects.educational.activities.text1')}</p>
-            <p>{t('projects.educational.activities.budget')}</p>
+            <p className="font-bold">{t('projects.educational.activities.budget')}</p>
         </ProjectCard>
 
         <ProjectCard>
             <h2 className="text-2xl">{t('projects.educational.youthClab.title')}</h2>
             <p>{t('projects.educational.youthClab.text1')}</p>
-            <p>{t('projects.educational.youthClab.budget')}</p>
+            <p className="font-bold">{t('projects.educational.youthClab.budget')}</p>
         </ProjectCard>
 
     </ProjectsPage>)

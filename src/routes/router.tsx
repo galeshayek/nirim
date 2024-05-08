@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "./Home";
 import Users from "./Users";
@@ -7,7 +7,7 @@ import Health from "./Health";
 import Community from "./Community";
 import Infrastructure from "./Infrastructure";
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
