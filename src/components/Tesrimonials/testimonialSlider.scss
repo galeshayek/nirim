@@ -1,0 +1,11 @@
+.slick-arrow {
+    @apply bg-pop flex p-4 rounded justify-center items-center -mx-4 hover:bg-pop
+}
+
+.slick-prev:before {
+    @apply text-black
+}
+
+.slick-next:before {
+    @apply text-black
+}
