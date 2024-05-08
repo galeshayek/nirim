@@ -4,6 +4,8 @@ import { BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from 'react-i18next';
 import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
+import { Link } from "react-router-dom";
+import { footerSectionAnchor, needsSectionAnchor } from "../services/ancors";
 
 const NavBar = () => {
     const { updateLang, lang } = useContext(langContext);
@@ -14,16 +16,16 @@ const NavBar = () => {
         document.documentElement.lang = lang
     }, [lang])
     return (<>
-        <div>
-            <button className="bg-pop px-3 py-1 rounded-md">
+        <div className="self-center max-lg:text-center max-lg:pb-4 lg:pl-10">
+            <button className="bg-pop text-xl px-3 py-1 rounded-md">
                 DONATE
             </button>
         </div>
         <ul className='lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2 gap-5 lg:gap-0 *:text-xl ' dir={i18n.dir(lang)} >
-            <li><a href="#about">{t('header.nav1')}</a></li>
-            <li><a href="#">{t('header.nav2')}</a></li>
+            <li><Link to={'/'}>{t('header.nav1')}</Link></li>
+            <li><button onClick={needsSectionAnchor}>{t('header.nav2')}</button></li>
             <li><a href="#">{t('header.nav3')}</a></li>
-            <li><a href="#">{t('header.nav4')}</a></li>
+            <li><button onClick={footerSectionAnchor}>{t('header.nav4')}</button></li>
         </ul >
 
         <div className="lg:flex hidden gap-2 col-start-3 col-end-4 justify-end items-center">

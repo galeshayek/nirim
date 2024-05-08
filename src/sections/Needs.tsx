@@ -27,7 +27,7 @@ const Needs = () => {
         arrows: false,
     }
     return (
-        <section className="flex gap-10 mt-10">
+        <section id="needsSection" className="flex gap-10 my-10">
             <div className="flex md:flex-col w-2/12 max-w-60 pl-10">
                 <div className="flex flex-row max-md:w-[75vw] md:flex-col gap-3 ">
                     <div className="max-md:w-4/12">

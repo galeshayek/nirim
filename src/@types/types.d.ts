@@ -24,4 +24,6 @@ export type Form = {
     email: string
 }
 
+export type EmailForm = { email: string };
+
 export type sportCenterUl = { li: string, id: number }

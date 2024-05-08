@@ -20,10 +20,32 @@ i18n
             en: {
                 translation: {
                     header: {
-                        nav1: 'About',
+                        nav1: 'Home',
                         nav2: 'Donate',
                         nav3: 'projects',
                         nav4: 'Contact'
+                    },
+                    footer: {
+                        contact: {
+                            title: 'Contact us:',
+                            phone: 'Phone:',
+                            phoneNumber: '+972-52-482-7994',
+                            email: 'Email:',
+                        },
+                        links: {
+                            title: 'Links',
+                            item1: 'website',
+                            item2: 'website',
+                        },
+                        subscribe: {
+                            title: 'Subscribe',
+                            ariaLabel: 'your email',
+                            placeholder: 'Email:',
+                            button: 'Send',
+                            errorMsg: 'Email is invalid',
+                            errorMsg1: 'Email already exists',
+                            errorMsg2: 'Email sent',
+                        },
                     },
                     hero: {
                         subtitle: 'Kibbutz Nirim ',
