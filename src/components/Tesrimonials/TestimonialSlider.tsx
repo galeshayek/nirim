@@ -35,7 +35,7 @@ const TestimonialSlider = () => {
     };
     return (
         <div className=" w-[85vw] md:w-8/12 md:py-4">
-            <h3 className=" text-3xl text-center border-b-2 w-fit mx-auto border-pop">{t('afterOct.testiTitle')}</h3>
+            <h3 className=" text-3xl text-center border-b-2 w-fit mx-auto border-slate-700">{t('afterOct.testiTitle')}</h3>
             <Slider {...settings}>
                 <Testimonial title={t('afterOct.testi1.title')} text={t('afterOct.testi1.p')} />
                 <Testimonial title={t('afterOct.testi2.title')} text={t('afterOct.testi2.p')} />
