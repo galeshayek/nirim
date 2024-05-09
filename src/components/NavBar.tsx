@@ -11,12 +11,8 @@ import {
     Menu,
     MenuButton,
     MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-} from '@chakra-ui/react'
+    MenuItem
+} from '@chakra-ui/react';
 
 
 const NavBar = () => {

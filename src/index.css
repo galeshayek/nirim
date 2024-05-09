@@ -19,7 +19,3 @@
         255;
     --text: 36, 36, 36;
 }
-
-html {
-    scroll-behavior: smooth;
-}

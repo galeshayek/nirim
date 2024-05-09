@@ -19,6 +19,11 @@ i18n
         resources: {
             en: {
                 translation: {
+                    error: {
+                        title: "Opps! this page doesn't exist",
+                        text: 'Oops! The page you are looking for does not exist. It might have been moved or deleted.',
+                        btn: 'Return to home page'
+                    },
                     header: {
                         nav1: 'Home',
                         nav2: 'Donate',

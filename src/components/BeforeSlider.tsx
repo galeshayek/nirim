@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
-import { images1, images2, images3 } from "../services/afterImages"
+import { images1, images2, images3 } from "../services/beforeImages"
 
 const BeforeSlider = () => {
     const { t } = useTranslation()

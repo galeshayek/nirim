@@ -8,6 +8,9 @@ const Hero = () => {
         setTimeout(() => {
             sethidden('opacity-0 transition duration-1000')
         }, 5000);
+        setTimeout(() => {
+            sethidden('hidden')
+        }, 6000)
     }, [])
     const { t } = useTranslation()
     return (<section className="pt-10 flex flex-col justify-center items-center mx-3 md:mx-10 px-4 border-l-[2rem] border-pop">
