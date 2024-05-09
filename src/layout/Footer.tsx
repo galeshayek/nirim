@@ -99,7 +99,7 @@ const Footer = () => {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex max-md:flex-col gap-3">
-                            <div className="w-6/12">
+                            <div className="w-12/12 md:w-6/12">
                                 <input
                                     className="border-4 border-pop rounded p-1"
                                     type="text"
@@ -128,7 +128,7 @@ const Footer = () => {
                             </div>
 
 
-                            <div className="w-6/12">
+                            <div className="w-12/12 md:w-6/12">
 
                                 <input
                                     className="border-4 border-pop rounded p-1"
