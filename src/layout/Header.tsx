@@ -10,9 +10,9 @@ import {
     DrawerContent, useDisclosure
 } from '@chakra-ui/react';
 import { useTranslation } from "react-i18next";
-import { BiMenu, BiMoon, BiSun } from "react-icons/bi";
+import { BiMenu, } from "react-icons/bi";
 import { langContext } from "../contexts/langContext";
-import { ThemeContext } from "../contexts/ThemeContext";
+// import { ThemeContext } from "../contexts/ThemeContext";
 
 const Header = () => {
     const { width } = useWindowSize()
@@ -20,7 +20,7 @@ const Header = () => {
     const btnRef = useRef<HTMLButtonElement>(null)
     const { i18n } = useTranslation();
     const { updateLang } = useContext(langContext);
-    const { toggle, theme } = useContext(ThemeContext);
+    // const { toggle, theme } = useContext(ThemeContext);
     const [index, setindex] = useState('z-10')
 
     if (width >= 1024) {
@@ -49,11 +49,13 @@ const Header = () => {
                                 <div className="space-x-1 *:border-2 *:rounded *:border-primary *:px-2">
                                     {Object.keys(lngs).map((lng) => (
                                         <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                                            {lngs[lng].flag}
+                                            <p className="px-1">
+                                                <span className={`fi fi-${lngs[lng].code}`}></span>
+                                            </p>
                                         </button>
                                     ))}
                                 </div>
-                                <button className="hover:bg-oposite/30 p-2 rounded text-2xl ml-auto mr-2" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button>
+                                {/* <button className="hover:bg-oposite/30 p-2 rounded text-2xl ml-auto mr-2" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button> */}
                             </div>
                         </DrawerHeader>
 
