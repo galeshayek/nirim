@@ -6,7 +6,7 @@ export type ProjectPage = (props: { children: ReactNode, title: ReactNode }) => 
 export interface LanguageMap {
     [key: string]: {
         nativeName: string,
-        flag: string,
+        code: string,
     };
 }
 
@@ -24,6 +24,12 @@ export type Form = {
     email: string
 }
 
-export type EmailForm = { email: string };
+export type EmailForm = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
+    receiveUpdates: boolean;
+}
 
 export type sportCenterUl = { li: string, id: number }

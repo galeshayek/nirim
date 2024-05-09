@@ -8,8 +8,12 @@ const AfterOct = () => {
     return (
         <section id="about" className="m-auto flex flex-col gap-y-5 pt-10 mx-3 md:mx-10 px-4 items-center border-l-[2rem] border-pop">
             <p><span className="font-bold">{t('afterOct.title')}</span>{t('afterOct.p')}</p>
+            <div className="bg-slate-700 py-10 rounded">
+                <AfterSlider />
+            </div>
+
             <TestimonialSlider />
-            <AfterSlider />
+
             <h2 className="text-2xl p-3 bg-primary text-oposite font-semibold">{t('afterOct.subtitle')}</h2>
         </section>
     )

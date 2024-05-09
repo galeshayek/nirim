@@ -51,6 +51,9 @@ const Needs = () => {
                         <p><span className="font-semibold">{t('needs.ul.li4.subtitle')}</span>{t('needs.ul.li4.text')}<Link to={'/infrastructure#'} className="px-2 text-blue-500 hover:underline cursor-pointer">{t('needs.ul.link')}</Link></p>
                     </li>
                 </ul>
+
+                <p className="bg-pop text-center max-md:-mx-10 p-2 font-semibold">{t('cta.text2')}</p>
+
                 <div className="bg-primary p-2 max-md:-mx-10 flex flex-col gap-2 items-center">
                     <p className=" text-xl font-medium text-oposite text-center">{t('cta.text')}</p>
                     <button className="bg-pop font-medium px-3 py-1 rounded">Donate</button>

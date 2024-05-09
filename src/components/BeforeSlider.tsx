@@ -44,7 +44,7 @@ const BeforeSlider = () => {
                         ))}
                     </Slider>
                 </div>
-            </div>un
+            </div>
         </>
     )
 }

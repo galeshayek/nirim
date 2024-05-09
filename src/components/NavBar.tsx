@@ -1,19 +1,22 @@
 import { useContext, useEffect } from "react";
-import { ThemeContext } from "../contexts/ThemeContext";
-import { BiMoon, BiSun } from "react-icons/bi";
+// import { ThemeContext } from "../contexts/ThemeContext";
+// import { BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from 'react-i18next';
 import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
 import { Link } from "react-router-dom";
 import { footerSectionAnchor, needsSectionAnchor } from "../services/ancors";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 
 const NavBar = () => {
     const { updateLang, lang } = useContext(langContext);
     const { t } = useTranslation()
     const { i18n } = useTranslation();
-    const { toggle, theme } = useContext(ThemeContext);
+    // const { toggle, theme } = useContext(ThemeContext);
     useEffect(() => {
         document.documentElement.lang = lang
+        console.log(i18n.language)
     }, [lang])
     return (<>
         <div className="self-center max-lg:text-center max-lg:pb-4 lg:pl-10">
@@ -27,16 +30,17 @@ const NavBar = () => {
             <li><a href="#">{t('header.nav3')}</a></li>
             <li><button onClick={footerSectionAnchor}>{t('header.nav4')}</button></li>
         </ul >
-
         <div className="lg:flex hidden gap-2 col-start-3 col-end-4 justify-end items-center">
             <div className="space-x-1">
                 {Object.keys(lngs).map((lng) => (
                     <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                        {lngs[lng].flag}
+                        <p className="px-1">
+                            <span className={`fi fi-${lngs[lng].code}`}></span>
+                        </p>
                     </button>
                 ))}
             </div>
-            <button className="hover:bg-base/30 p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button>
+            {/* <button className="hover:bg-base/30 p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button> */}
         </div>
     </>)
 }

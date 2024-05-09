@@ -8,6 +8,8 @@ import { emailPattern } from "../validation/regex";
 import { postEmail } from "../services/axiosPost";
 import { useState } from "react";
 import PropagateLoader from "react-spinners/BeatLoader";
+import { phonePattern } from "../validation copy/validation";
+import { Checkbox } from '@chakra-ui/react'
 
 
 
@@ -22,7 +24,7 @@ const Footer = () => {
         reset,
         formState: { errors },
     } = useForm<EmailForm>({
-        mode: 'onBlur'
+        mode: 'all'
     })
     const onSubmit: SubmitHandler<EmailForm> = (data) => {
         setloading(true)
@@ -93,42 +95,150 @@ const Footer = () => {
                 <form
                     noValidate
                     onSubmit={handleSubmit(onSubmit)}
-                    className="flex flex-col gap-3">
-                    <div>
-                        <input
-                            className="border-4 border-pop rounded p-1"
-                            type="email"
-                            autoComplete="email"
-                            aria-label={t('footer.subscribe.ariaLabel')}
-                            placeholder={t('footer.subscribe.placeholder')}
-                            {
-                            ...register(
-                                "email", {
-                                required: true,
-                                pattern: {
-                                    value: emailPattern,
-                                    message: `${t('footer.subscribe.errorMsg')}`
-                                }
-                            }
-                            )
-                            }
-                        />
-                        {errors.email &&
-                            <p className="text-pop text-center">{errors.email?.message}</p>
-                        }
-                        <div className={`${loading == true ? "flex" : 'hidden'} justify-center pt-2 pb-4`}>
-                            <PropagateLoader
-                                color='rgba(var(--primary))'
-                                loading={loading}
-                                aria-label="Loading Spinner"
-                                data-testid="loader"
-                            />
-                        </div>
-                        {errorMsg &&
-                            <p className="text-pop text-center">{errorMsg}</p>
-                        }
-                    </div>
+                    className="flex flex-col gap-3 w-fit">
 
+                    <div className="flex flex-col gap-2">
+                        <div className="flex max-md:flex-col gap-3">
+                            <div className="w-6/12">
+                                <input
+                                    className="border-4 border-pop rounded p-1"
+                                    type="text"
+                                    autoComplete="given-name"
+                                    aria-label={t('footer.subscribe.firstName.ariaLabel')}
+                                    placeholder={t('footer.subscribe.firstName.placeholder')}
+                                    {
+                                    ...register(
+                                        "firstName", {
+                                        required: `${t('footer.subscribe.firstName.required')}`,
+                                        minLength: {
+                                            value: 2,
+                                            message: `${t('footer.subscribe.firstName.min')}`
+                                        },
+                                        maxLength: {
+                                            value: 30,
+                                            message: `${t('footer.subscribe.firstName.max')}`
+                                        }
+                                    }
+                                    )
+                                    }
+                                />
+                                {errors.firstName &&
+                                    <p className="text-oposite text-center">{errors.firstName?.message}</p>
+                                }
+                            </div>
+
+
+                            <div className="w-6/12">
+
+                                <input
+                                    className="border-4 border-pop rounded p-1"
+                                    type="text"
+                                    autoComplete="family-name"
+                                    aria-label={t('footer.subscribe.lastName.ariaLabel')}
+                                    placeholder={t('footer.subscribe.lastName.placeholder')}
+                                    {
+                                    ...register(
+                                        "lastName", {
+                                        required: `${t('footer.subscribe.lastName.required')}`,
+                                        minLength: {
+                                            value: 2,
+                                            message: `${t('footer.subscribe.lastName.min')}`
+                                        },
+                                        maxLength: {
+                                            value: 30,
+                                            message: `${t('footer.subscribe.lastName.max')}`
+                                        }
+                                    }
+                                    )
+                                    }
+                                />
+                                {errors.lastName &&
+                                    <p className="text-oposite text-center">{errors.lastName?.message}</p>
+                                }
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <input
+                                className="border-4 border-pop rounded p-1 w-full"
+                                type="email"
+                                autoComplete="email"
+                                aria-label={t('footer.subscribe.email.ariaLabel')}
+                                placeholder={t('footer.subscribe.email.placeholder')}
+                                {
+                                ...register(
+                                    "email", {
+                                    required: true,
+                                    pattern: {
+                                        value: emailPattern,
+                                        message: `${t('footer.subscribe.email.errorMsg')}`
+                                    }
+                                }
+                                )
+                                }
+                            />
+                            {errors.email &&
+                                <p className="text-oposite text-center">{errors.email?.message}</p>
+                            }
+                            {errorMsg &&
+                                <p className="text-oposite text-center">{errorMsg}</p>
+                            }
+                        </div>
+
+
+                        <div>
+                            <input
+                                className="border-4 border-pop rounded p-1 w-full"
+                                type="tel"
+                                autoComplete="tel"
+                                aria-label={t('footer.subscribe.number.ariaLabel')}
+                                placeholder={t('footer.subscribe.number.placeholder')}
+                                {
+                                ...register(
+                                    "phoneNumber", {
+                                    required: "Phone number is required",
+                                    pattern: {
+                                        value: phonePattern,
+                                        message: `${t('footer.subscribe.number.msg')}`
+                                    }
+                                }
+                                )
+                                }
+                            />
+                            {errors.phoneNumber &&
+                                <p className="text-oposite text-center">{errors.phoneNumber?.message}</p>
+                            }
+                        </div>
+
+                        <div>
+                            <div className="flex items-center space-x-2">
+                                <Checkbox
+                                    className="size-5 text-primary focus:ring-primary bg-oposite rounded"
+                                    type="checkbox"
+                                    id="updatesCheckbox"
+                                    {
+                                    ...register("receiveUpdates")
+                                    }
+                                />
+                                <label
+                                    aria-label={t('footer.subscribe.checkBox.ariaLabel')}
+                                    htmlFor="updatesCheckbox" className="font-medium text-sm text-gray-700">
+                                    {t('footer.subscribe.checkBox.label')}
+                                </label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className={`${loading == true ? "flex" : 'hidden'} justify-center pt-2 pb-4`}>
+                        <PropagateLoader
+                            color='rgba(var(--pop))'
+                            loading={loading}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
+                    </div>
                     <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                 </form>
             </section>

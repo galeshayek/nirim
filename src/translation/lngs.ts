@@ -3,10 +3,10 @@ import { LanguageMap } from "../@types/types";
 export const lngs: LanguageMap = {
     en: {
         nativeName: 'English',
-        flag: '🇺🇸',
+        code: 'us',
     },
     he: {
         nativeName: 'hebrew',
-        flag: '🇮🇱',
+        code: 'il',
     }
 };

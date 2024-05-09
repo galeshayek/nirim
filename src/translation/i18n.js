@@ -39,12 +39,38 @@ i18n
                         },
                         subscribe: {
                             title: 'Subscribe',
-                            ariaLabel: 'your email',
-                            placeholder: 'Email:',
+                            firstName: {
+                                ariaLabel: 'First Name',
+                                placeholder: 'First Name',
+                                required: 'this field is required',
+                                min: 'Name is too short',
+                                max: 'Name is too long',
+                            },
+                            lastName: {
+                                ariaLabel: 'Last Name',
+                                placeholder: 'Last Name',
+                                required: 'this field is required',
+                                min: 'Name is too short',
+                                max: 'Name is too long',
+                            },
+                            email: {
+                                ariaLabel: 'your email',
+                                placeholder: 'Email',
+                                errorMsg: 'Email is invalid',
+                                errorMsg1: 'Email already exists',
+                                errorMsg2: 'Sent successfully',
+                            },
+                            number: {
+                                ariaLabel: 'Phone Number',
+                                placeholder: 'Phone Number',
+                                msg: 'Phone nuber is invalid'
+                            },
+                            checkBox: {
+                                ariaLabel: 'accept getting updates checkbox',
+                                label: 'Accept getting updates',
+                            },
                             button: 'Send',
-                            errorMsg: 'Email is invalid',
-                            errorMsg1: 'Email already exists',
-                            errorMsg2: 'Email sent',
+
                         },
                     },
                     hero: {
@@ -107,6 +133,7 @@ i18n
                         },
                     },
                     cta: {
+                        text2: "We have several impactful projects in need of funding. Please feel free to contact us if you're interested in supporting our initiatives!",
                         text: `We invite you to join us in our journey back home to Kibbutz Nirim. Your support is not just a contribution—it's an investment in the future of Nirim's community, a testimony to the power of solidarity and unity, and an example of the resilience of Am Israel.`,
                         button: 'Donate',
                     },
