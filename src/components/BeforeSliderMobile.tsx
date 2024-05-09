@@ -21,7 +21,7 @@ const BeforeSliderMobile = () => {
     }
     return (
         <>
-            <div className=" md:pl-12">
+            <div className="w-[70vw] md:pl-12">
                 <div className="flex flex-row *:w-[25vw] gap-3 ">
                     <div>
                         <Slider {...settings}>
