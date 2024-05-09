@@ -47,7 +47,7 @@ const Footer = () => {
     }
 
     return (
-        <footer id="footerSection" className="bg-complimantry flex flex-col items-center md:flex-row justify-center md:items-start gap-16 py-10" dir={i18next.dir()}>
+        <footer id="footerSection" className="bg-primary flex flex-col items-center md:flex-row justify-center md:items-start gap-16 py-10" dir={i18next.dir()}>
             <section className="order-1">
                 <h4 className=" text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-2">                        {t('footer.links.title')}
                 </h4>
@@ -75,7 +75,7 @@ const Footer = () => {
                         <a href="mailto:nirim.r2g@nirim.co.il" className="hover:underline">nirim.r2g@nirim.co.il</a>
                     </li>
                 </ul>
-                <div className="flex gap-3 justify-center pt-6 text-complimantry *:text-5xl *:inline-block *:bg-pop *:rounded-lg">
+                <div className="flex gap-3 justify-center pt-6 text-primary *:text-5xl *:inline-block *:bg-pop *:rounded-lg">
                     <a className="hover:scale-105 transition" href="mailto:nirim.r2g@nirim.co.il" target="_blank" rel="noreferrer noopener">
                         <IoMailOutline />
                     </a>
@@ -96,7 +96,7 @@ const Footer = () => {
                     className="flex flex-col gap-3">
                     <div>
                         <input
-                            className="border-4 border-primary rounded p-1"
+                            className="border-4 border-pop rounded p-1"
                             type="email"
                             autoComplete="email"
                             aria-label={t('footer.subscribe.ariaLabel')}
