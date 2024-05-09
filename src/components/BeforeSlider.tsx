@@ -1,10 +1,17 @@
+import { images1, images2, images3 } from "../services/afterImages"
+import heLogo from '../assets/logo/hebrew.png'
+import enLogo from '../assets/logo/english.png'
+import bth from '../assets/logo/bth.webp'
+import { useContext } from "react"
+import { langContext } from "../contexts/langContext"
+import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Slider from 'react-slick'
-import { images1, images2, images3 } from "../services/afterImages"
 import { useTranslation } from "react-i18next"
+
 const BeforeSlider = () => {
     const { t } = useTranslation()
+
     const settings = {
         dots: false,
         infinite: true,
@@ -17,24 +24,26 @@ const BeforeSlider = () => {
         pauseOnHover: false,
         arrows: false,
     }
+    const { lang } = useContext(langContext)
+
     return (
         <>
-            <div className="flex gap-3 w-10/12">
-                <div className="w-4/12">
+            <div className="flex flex-col gap-3 ">
+                <div>
                     <Slider {...settings}>
                         {images1.map((img) => (
                             <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
                         ))}
                     </Slider>
                 </div>
-                <div className="w-4/12">
+                <div>
                     <Slider {...settings}>
                         {images2.map((img) => (
                             <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
                         ))}
                     </Slider>
                 </div>
-                <div className="w-4/12">
+                <div>
                     <Slider {...settings}>
                         {images3.map((img) => (
                             <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
