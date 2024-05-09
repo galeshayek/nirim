@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next"
-import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import TestimonialSlider from "../../components/Tesrimonials/TestimonialSlider"
-import BeforeSlider from "../../components/BeforeSlider"
+import "slick-carousel/slick/slick.css"
 import AfterSlider from "../../components/AfterSlider"
+import TestimonialSlider from "../../components/Tesrimonials/TestimonialSlider"
 const AfterOct = () => {
     const { t } = useTranslation()
     return (

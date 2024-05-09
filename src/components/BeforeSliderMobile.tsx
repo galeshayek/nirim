@@ -1,9 +1,7 @@
-import { useContext } from "react"
 import { useTranslation } from "react-i18next"
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
-import { langContext } from "../contexts/langContext"
 import { images1, images2, images3 } from "../services/beforeImages"
 
 const BeforeSliderMobile = () => {
@@ -21,11 +19,9 @@ const BeforeSliderMobile = () => {
         pauseOnHover: false,
         arrows: false,
     }
-    const { lang } = useContext(langContext)
-
     return (
         <>
-            <div className=" md:pl-12 pl-5">
+            <div className=" md:pl-12">
                 <div className="flex flex-row *:w-[25vw] gap-3 ">
                     <div>
                         <Slider {...settings}>

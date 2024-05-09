@@ -1,13 +1,8 @@
-import { images1, images2, images3 } from "../services/afterImages"
-import heLogo from '../assets/logo/hebrew.png'
-import enLogo from '../assets/logo/english.png'
-import bth from '../assets/logo/bth.webp'
-import { useContext } from "react"
-import { langContext } from "../contexts/langContext"
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 import { useTranslation } from "react-i18next"
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import { images1, images2, images3 } from "../services/afterImages"
 
 const BeforeSlider = () => {
     const { t } = useTranslation()
@@ -24,7 +19,6 @@ const BeforeSlider = () => {
         pauseOnHover: false,
         arrows: false,
     }
-    const { lang } = useContext(langContext)
 
     return (
         <>
@@ -50,7 +44,7 @@ const BeforeSlider = () => {
                         ))}
                     </Slider>
                 </div>
-            </div>
+            </div>un
         </>
     )
 }
