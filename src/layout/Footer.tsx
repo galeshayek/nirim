@@ -34,10 +34,10 @@ const Footer = () => {
                 console.log(r)
                 switch (r.data.statusCode) {
                     case 400:
-                        seterrorMsg(`${t('footer.subscribe.errorMsg1')}`);
+                        seterrorMsg(`${t('footer.subscribe.email.errorMsg1')}`);
                         break;
                     case 200:
-                        seterrorMsg(`${t('footer.subscribe.errorMsg2')}`);
+                        seterrorMsg(`${t('footer.subscribe.email.errorMsg2')}`);
                         reset();
                         break;
                 }
@@ -181,9 +181,6 @@ const Footer = () => {
                             {errors.email &&
                                 <p className="text-oposite text-center">{errors.email?.message}</p>
                             }
-                            {errorMsg &&
-                                <p className="text-oposite text-center">{errorMsg}</p>
-                            }
                         </div>
 
 
@@ -239,7 +236,11 @@ const Footer = () => {
                             data-testid="loader"
                         />
                     </div>
+
                     <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
+                    {errorMsg &&
+                        <p className="text-oposite text-center">{errorMsg}</p>
+                    }
                 </form>
             </section>
         </footer>
