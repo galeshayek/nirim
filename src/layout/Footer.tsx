@@ -239,7 +239,7 @@ const Footer = () => {
 
                     <button className="bg-pop flex justify-center items-center gap-2 rounded px-3 text-xl hover:scale-110 transition">{t('footer.subscribe.button')} <span className={i18next.dir() == 'ltr' && 'rotate-180' || 'rotate-0'}><BiArrowBack /></span></button>
                     {errorMsg &&
-                        <p className="text-oposite text-center">{errorMsg}</p>
+                        <p className="text-oposite text-center font-medium text-xl">{errorMsg}</p>
                     }
                 </form>
             </section>
