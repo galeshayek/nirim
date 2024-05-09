@@ -38,8 +38,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
-],
-  {
-    basename: '/nirim'
-  }
+]
 );
