@@ -13,6 +13,7 @@ import {
     MenuList,
     MenuItem
 } from '@chakra-ui/react';
+import LangBtn from "./LangBtn";
 
 
 const NavBar = () => {
@@ -47,15 +48,7 @@ const NavBar = () => {
             <li><button onClick={footerSectionAnchor}>{t('header.nav4')}</button></li>
         </ul >
         <div className="lg:flex hidden gap-2 col-start-3 col-end-4 justify-end items-center">
-            <div className="space-x-1">
-                {Object.keys(lngs).map((lng) => (
-                    <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                        <p className="px-1">
-                            <span className={`fi fi-${lngs[lng].code}`}></span>
-                        </p>
-                    </button>
-                ))}
-            </div>
+            <LangBtn />
             {/* <button className="hover:bg-base/30 p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button> */}
         </div>
     </>)

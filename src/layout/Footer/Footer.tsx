@@ -3,16 +3,14 @@ import { useTranslation } from "react-i18next";
 import { BiArrowBack, BiLogoFacebook, BiLogoWhatsapp, } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
 import { useForm, SubmitHandler } from "react-hook-form"
-import { EmailForm } from "../@types/types";
-import { emailPattern } from "../validation/regex";
-import { postEmail } from "../services/axiosPost";
+import { EmailForm } from "../../@types/types";
+import { emailPattern } from "../../validation/regex";
+import { postEmail } from "../../services/axiosPost";
 import { useState } from "react";
 import PropagateLoader from "react-spinners/BeatLoader";
-import { phonePattern } from "../validation copy/validation";
+import { phonePattern } from "../../validation copy/validation";
 import { Checkbox } from '@chakra-ui/react'
-
-
-
+import style from './footer.module.scss';
 
 const Footer = () => {
     const { t } = useTranslation()
@@ -23,9 +21,12 @@ const Footer = () => {
         handleSubmit,
         reset,
         formState: { errors },
+        setError,
+        clearErrors
     } = useForm<EmailForm>({
         mode: 'all'
     })
+
     const onSubmit: SubmitHandler<EmailForm> = (data) => {
         setloading(true)
         postEmail(data)
@@ -47,6 +48,13 @@ const Footer = () => {
                 console.log(e)
             })
     }
+
+    const onError = () => {
+        setError('receiveUpdates', { type: 'required' }, { shouldFocus: false });
+        setTimeout(() => {
+            clearErrors('receiveUpdates');
+        }, 500); // Reset the error after animation
+    };
 
     return (
         <footer id="footerSection" className="bg-primary flex flex-col items-center md:flex-row justify-center md:items-start gap-16 py-10" dir={i18next.dir()}>
@@ -94,7 +102,7 @@ const Footer = () => {
                 <h4 className="order-3 text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-5">{t('footer.subscribe.title')}</h4>
                 <form
                     noValidate
-                    onSubmit={handleSubmit(onSubmit)}
+                    onSubmit={handleSubmit(onSubmit, onError)}
                     className="flex flex-col gap-3 w-fit">
 
                     <div className="flex flex-col gap-2">
@@ -169,7 +177,7 @@ const Footer = () => {
                                 {
                                 ...register(
                                     "email", {
-                                    required: true,
+                                    required: `${t('footer.subscribe.email.required')}`,
                                     pattern: {
                                         value: emailPattern,
                                         message: `${t('footer.subscribe.email.errorMsg')}`
@@ -209,18 +217,20 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <div className="flex items-center space-x-2">
+                            <div className={errors.receiveUpdates ? style.shake : "pt-1 flex items-center gap-2"}>
                                 <Checkbox
                                     className="size-5 text-primary focus:ring-primary bg-oposite rounded"
                                     type="checkbox"
                                     id="updatesCheckbox"
                                     {
-                                    ...register("receiveUpdates")
+                                    ...register("receiveUpdates", {
+                                        required: true
+                                    })
                                     }
                                 />
                                 <label
                                     aria-label={t('footer.subscribe.checkBox.ariaLabel')}
-                                    htmlFor="updatesCheckbox" className="font-medium text-sm text-gray-700">
+                                    htmlFor="updatesCheckbox" className={errors.receiveUpdates ? style.error : "font-medium text-sm text-pop"}>
                                     {t('footer.subscribe.checkBox.label')}
                                 </label>
                             </div>

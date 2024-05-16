@@ -12,6 +12,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { BiMenu, } from "react-icons/bi";
 import { langContext } from "../contexts/langContext";
+import LangBtn from "../components/LangBtn";
 // import { ThemeContext } from "../contexts/ThemeContext";
 
 const Header = () => {
@@ -31,7 +32,7 @@ const Header = () => {
         )
     } else {
         return (
-            <header className={`${index} bg-primary sticky top-0 translate-y-0 py-4 pl-4`}>
+            <header className={`${index} bg-primary sticky top-0 translate-y-0 py-4 pl-4 flex justify-between pr-10`}>
                 <button ref={btnRef} onClick={() => { onOpen(), setindex('') }}>
                     <BiMenu className="text-3xl text-oposite" />
                 </button>
@@ -44,28 +45,14 @@ const Header = () => {
                 >
                     <DrawerOverlay onClick={() => { onClose(), setindex('z-10') }} />
                     <DrawerContent>
-                        <DrawerHeader>
-                            <div className="bg-oposite flex gap-5 z-20">
-                                <div className="space-x-1 *:border-2 *:rounded *:border-primary *:px-2">
-                                    {Object.keys(lngs).map((lng) => (
-                                        <button className="text-2xl" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
-                                            <p className="px-1">
-                                                <span className={`fi fi-${lngs[lng].code}`}></span>
-                                            </p>
-                                        </button>
-                                    ))}
-                                </div>
-                                {/* <button className="hover:bg-oposite/30 p-2 rounded text-2xl ml-auto mr-2" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button> */}
-                            </div>
-                        </DrawerHeader>
-
                         <DrawerBody>
-                            <div className="bg-oposite border-b-4 border-pop pb-3 z-20">
+                            <div className="bg-oposite border-b-4 border-pop py-3 z-20">
                                 <NavBar />
                             </div>
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>
+                <LangBtn />
             </header >
         )
     }

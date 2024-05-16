@@ -6,7 +6,7 @@ export const lngs: LanguageMap = {
         code: 'us',
     },
     he: {
-        nativeName: 'hebrew',
+        nativeName: 'עברית',
         code: 'il',
     }
 };

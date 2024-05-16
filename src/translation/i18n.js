@@ -61,6 +61,7 @@ i18n
                             email: {
                                 ariaLabel: 'your email',
                                 placeholder: 'Email',
+                                required: 'Email is required',
                                 errorMsg: 'Email is invalid',
                                 errorMsg1: 'Email already exists',
                                 errorMsg2: 'Sent successfully',
