@@ -54,12 +54,13 @@ const Needs = () => {
                     </li>
                 </ul>
 
-                <p className="bg-pop text-center max-md:-mx-10 p-2 font-semibold">{t('cta.text2')}</p>
-
                 <div className="bg-primary p-2 max-md:-mx-10 flex flex-col gap-2 items-center">
                     <p className=" text-xl font-medium text-oposite text-center">{t('cta.text')}</p>
                     <a href={t('donation.link')} target="_blank" rel="noreferrer noopener" className="bg-pop font-medium px-3 py-1 rounded">{t('header.nav2')}</a>
                 </div>
+
+                <p className="bg-pop text-center max-md:-mx-10 p-2 font-semibold">{t('cta.text2')}</p>
+
             </div>
         </section>
     )
