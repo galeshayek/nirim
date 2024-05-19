@@ -1,15 +1,15 @@
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import { BiArrowBack, BiLogoFacebook, BiLogoInstagram, BiLogoWhatsapp, } from "react-icons/bi";
+import { BiArrowBack, BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form";
 import { EmailForm } from "../../@types/types";
 import { emailPattern } from "../../validation/regex";
 import { postEmail } from "../../services/axiosPost";
 import { useState } from "react";
 import PropagateLoader from "react-spinners/BeatLoader";
 import { phonePattern } from "../../validation copy/validation";
-import { Checkbox } from '@chakra-ui/react'
+import { Checkbox } from '@chakra-ui/react';
 import style from './footer.module.scss';
 
 const Footer = () => {
