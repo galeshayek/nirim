@@ -26,7 +26,7 @@ const Community = () => {
         setul2(arr2)
     }, [i18next.language])
     return (
-        <ProjectsPage title={`${t('needs.ul.li3.subtitle')}`}>
+        <ProjectsPage title={t('needs.ul.li3.subtitle')}>
             <ProjectCard>
                 <h2 className="text-2xl">{t('projects.community.colorfulPlayground.title')}</h2>
                 <p>{t('projects.community.colorfulPlayground.text1')}</p>

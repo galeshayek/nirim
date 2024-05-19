@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import photo from '../../assets/photosBefore/11.webp'
 import { useEffect, useState } from "react"
+import i18next from "i18next"
 
 const Hero = () => {
     const [hidden, sethidden] = useState('')
@@ -13,7 +14,7 @@ const Hero = () => {
         }, 6000)
     }, [])
     const { t } = useTranslation()
-    return (<section className="pt-10 flex flex-col justify-center items-center mx-3 md:mx-10 px-4 border-l-[2rem] border-pop">
+    return (<section dir={i18next.dir()} className="pt-10 flex flex-col justify-center items-center mx-3 md:mx-10 px-4 border-l-[2rem] border-pop">
         <p className="text-lg pb-5"><span className="font-bold">{t('hero.subtitle')}</span>{t('hero.text')}</p>
         <div className="relative w-full">
             <div className={`absolute ${hidden}`}>

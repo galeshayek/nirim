@@ -16,10 +16,10 @@ const LangBtn = () => {
             <MenuList className="text-textColor bg-oposite  p-2 rounded-md space-y-2 shadow-2xl">
                 {Object.keys(lngs).map((lng) => {
                     return (
-                        <MenuItem>
-                            <button className="p-1" key={lng} type="submit" onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
+                        <MenuItem key={lngs[lng].code}>
+                            <p className="p-1" key={lng} onClick={() => { i18n.changeLanguage(lng), updateLang(lng) }}>
                                 {lngs[lng].nativeName}
-                            </button>
+                            </p>
                         </MenuItem>
                     )
                 })}

@@ -1,6 +1,6 @@
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import { BiArrowBack, BiLogoFacebook, BiLogoWhatsapp, } from "react-icons/bi";
+import { BiArrowBack, BiLogoFacebook, BiLogoInstagram, BiLogoWhatsapp, } from "react-icons/bi";
 import { IoMailOutline } from "react-icons/io5";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { EmailForm } from "../../@types/types";
@@ -62,14 +62,11 @@ const Footer = () => {
                 <h4 className=" text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-2">                        {t('footer.links.title')}
                 </h4>
                 <div className="text-oposite flex flex-col">
-                    <a className="hover:underline" href="">
+                    <a className="hover:underline" href="http://www.nirim.co.il/">
                         &bull;
                         {t('footer.links.item1')}
                     </a>
-                    <a className="hover:underline" href="">
-                        &bull;
-                        {t('footer.links.item2')}
-                    </a>
+
                 </div>
             </section>
 
@@ -92,8 +89,8 @@ const Footer = () => {
                     <a className="hover:scale-105 transition" href="https://wa.me/" target="_blank" rel="noreferrer noopener">
                         <BiLogoWhatsapp />
                     </a>
-                    <a className="hover:scale-105 transition" href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener">
-                        <BiLogoFacebook />
+                    <a className="hover:scale-105 transition" href="https://www.instagram.com/kibbutz_nirim/" target="_blank" rel="noreferrer noopener">
+                        <BiLogoInstagram />
                     </a>
                 </div>
             </section>

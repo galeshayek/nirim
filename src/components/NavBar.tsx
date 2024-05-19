@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 // import { ThemeContext } from "../contexts/ThemeContext";
 // import { BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from 'react-i18next';
-import { lngs } from "../translation/lngs";
 import { langContext } from "../contexts/langContext";
 import { Link, NavLink } from "react-router-dom";
 import { footerSectionAnchor, needsSectionAnchor } from "../services/ancors";
@@ -17,7 +16,7 @@ import LangBtn from "./LangBtn";
 
 
 const NavBar = () => {
-    const { updateLang, lang } = useContext(langContext);
+    const { lang } = useContext(langContext);
     const { t } = useTranslation()
     const { i18n } = useTranslation();
     // const { toggle, theme } = useContext(ThemeContext);
@@ -26,17 +25,17 @@ const NavBar = () => {
         console.log(i18n.language)
     }, [lang])
     return (<>
-        <div className="self-center max-lg:text-center max-lg:pb-4 lg:pl-10">
-            <button className="bg-pop text-xl px-3 py-1 rounded-md">
-                DONATE
-            </button>
+        <div className=" max-lg:hidden self-center max-lg:text-center max-lg:pb-4 lg:pl-10">
+            <a href={t('donation.link')} target="_blank" rel="noreferrer noopener" className="bg-pop text-xl px-3 py-1 rounded-md">
+                {t('header.nav2')}
+            </a>
         </div>
         <ul className='lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2 gap-5 lg:gap-0 *:text-xl ' dir={i18n.dir(lang)} >
             <li><Link to={'/'}>{t('header.nav1')}</Link></li>
             <li><button onClick={needsSectionAnchor}>{t('header.nav2')}</button></li>
             <Menu placement="bottom">
                 <MenuButton>
-                    Projects
+                    {t('header.nav3')}
                 </MenuButton>
                 <MenuList className="text-textColor bg-oposite border-pop border-4 lg:border-t-0 p-2 rounded-b-md space-y-2">
                     <MenuItem className="hover:underline"><NavLink to={'/educationalfacilities'}>{t('needs.ul.li1.subtitle')}</NavLink></MenuItem>

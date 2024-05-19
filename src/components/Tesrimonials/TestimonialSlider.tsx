@@ -8,6 +8,7 @@ import PrevArrow from "./PrevArrow";
 import './testimonialSlider.scss';
 import useWindowSize from "../../hooks/useWindowSize";
 import { useEffect, useState } from "react";
+import i18next from "i18next";
 const TestimonialSlider = () => {
     const [boolean, setBoolean] = useState(true)
     const { width } = useWindowSize()
@@ -34,7 +35,7 @@ const TestimonialSlider = () => {
         arrows: boolean
     };
     return (
-        <div className=" w-[85vw] md:w-8/12 md:py-4">
+        <div dir={i18next.dir()} className=" w-[85vw] md:w-8/12 md:py-4">
             <h3 className=" text-3xl text-center border-b-2 w-fit mx-auto border-slate-700">{t('afterOct.testiTitle')}</h3>
             <Slider {...settings}>
                 <Testimonial title={t('afterOct.testi1.title')} text={t('afterOct.testi1.p')} />

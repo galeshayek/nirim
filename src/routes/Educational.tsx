@@ -4,7 +4,7 @@ import ProjectsPage from "../components/ProjectsPage"
 
 const Educational = () => {
     const { t } = useTranslation()
-    return (<ProjectsPage title="Educational Facilities">
+    return (<ProjectsPage title={t('needs.ul.li1.subtitle')}>
         <ProjectCard>
             <h2 className="text-2xl">{t('projects.educational.kinderGarden.title')}</h2>
             <p>{t('projects.educational.kinderGarden.text1')}</p>

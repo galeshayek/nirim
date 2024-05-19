@@ -10,6 +10,7 @@ import { Link } from "react-router-dom"
 import useWindowSize from "../hooks/useWindowSize"
 import BeforeSlider from "../components/BeforeSlider"
 import BeforeSliderMobile from "../components/BeforeSliderMobile"
+import i18next from "i18next"
 
 
 const Needs = () => {
@@ -20,6 +21,7 @@ const Needs = () => {
 
     return (
         <section id="needsSection" className="flex gap-10 my-10">
+
             <div className="flex md:flex-col w-2/12 max-w-60 pl-10">
                 {width >= 768 && <BeforeSlider />}
                 {width <= 768 &&
@@ -30,7 +32,7 @@ const Needs = () => {
                     <img src={bth} alt="bring them home logo" />
                 </div>
             </div>
-            <div className="space-y-3 pr-14 max-md:-ml-10 -pl-10 max-md:pt-52 max-sm:pt-36">
+            <div dir={i18next.dir()} className="space-y-3 pr-14 max-md:-ml-10 -pl-10 max-md:pt-52 max-sm:pt-36">
                 {width <= 768 && <div>
                     <img src={lang == 'he' ? heLogo : enLogo} alt="nirim logo" />
                     <img src={bth} alt="bring them home logo" />
@@ -56,7 +58,7 @@ const Needs = () => {
 
                 <div className="bg-primary p-2 max-md:-mx-10 flex flex-col gap-2 items-center">
                     <p className=" text-xl font-medium text-oposite text-center">{t('cta.text')}</p>
-                    <button className="bg-pop font-medium px-3 py-1 rounded">Donate</button>
+                    <a href={t('donation.link')} target="_blank" rel="noreferrer noopener" className="bg-pop font-medium px-3 py-1 rounded">{t('header.nav2')}</a>
                 </div>
             </div>
         </section>

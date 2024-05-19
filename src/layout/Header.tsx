@@ -1,27 +1,21 @@
-import { useContext, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import NavBar from "../components/NavBar";
 import useWindowSize from "../hooks/useWindowSize";
-import { lngs } from "../translation/lngs";
 
 import {
     Drawer,
-    DrawerBody, DrawerHeader,
-    DrawerOverlay,
+    DrawerBody, DrawerOverlay,
     DrawerContent, useDisclosure
 } from '@chakra-ui/react';
-import { useTranslation } from "react-i18next";
 import { BiMenu, } from "react-icons/bi";
-import { langContext } from "../contexts/langContext";
 import LangBtn from "../components/LangBtn";
+import { t } from "i18next";
 // import { ThemeContext } from "../contexts/ThemeContext";
 
 const Header = () => {
     const { width } = useWindowSize()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef<HTMLButtonElement>(null)
-    const { i18n } = useTranslation();
-    const { updateLang } = useContext(langContext);
-    // const { toggle, theme } = useContext(ThemeContext);
     const [index, setindex] = useState('z-10')
 
     if (width >= 1024) {
@@ -52,6 +46,11 @@ const Header = () => {
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>
+                <div className="lg:hidden self-center text-center">
+                    <a href={t('donation.link')} target="_blank" rel="noreferrer noopener" className="bg-pop text-xl px-3 py-1 rounded-md">
+                        {t('header.nav2')}
+                    </a>
+                </div>
                 <LangBtn />
             </header >
         )
