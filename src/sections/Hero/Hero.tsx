@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next"
-import photo from '../../assets/photosBefore/11.webp'
-import { useEffect, useRef, useState } from "react"
-import i18next from "i18next"
+import { useTranslation } from "react-i18next";
+import photo from '../../assets/photosBefore/11.webp';
+import { useEffect, useRef, useState } from "react";
+import i18next from "i18next";
 import { useInterval } from 'react-use';
 
 const Hero = () => {
