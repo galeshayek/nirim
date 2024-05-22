@@ -32,20 +32,19 @@ const Footer = () => {
         postEmail(data)
             .then(r => {
                 setloading(false)
-                console.log(r)
-                switch (r.data.statusCode) {
-                    case 400:
-                        seterrorMsg(`${t('footer.subscribe.email.errorMsg1')}`);
-                        break;
-                    case 200:
-                        seterrorMsg(`${t('footer.subscribe.email.errorMsg2')}`);
-                        reset();
-                        break;
-                }
+                console.log(r.status)
+                seterrorMsg(`${t('footer.subscribe.email.errorMsg2')}`);
+                reset();
+
             }
             )
             .catch((e) => {
                 console.log(e)
+                setloading(false)
+                if (e.response.data.kind === "unique" && e.response.data.path === 'email') {
+                    return seterrorMsg(`${t('footer.subscribe.email.errorMsg1')}`);
+                }
+                seterrorMsg(e.response.statusText)
             })
     }
 
@@ -98,6 +97,8 @@ const Footer = () => {
             <section>
                 <h4 className="order-3 text-xl text-oposite border-b-2 border-oposite pb-1 text-center mb-5">{t('footer.subscribe.title')}</h4>
                 <form
+                    name="send email form"
+                    aria-label="subscribe"
                     noValidate
                     onSubmit={handleSubmit(onSubmit, onError)}
                     className="flex flex-col gap-3 w-fit">

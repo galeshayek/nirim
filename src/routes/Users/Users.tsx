@@ -5,6 +5,7 @@ import { handleCopy } from "../../services/copyEmails"
 import exportToExcel from "../../services/excel"
 import useWindowSize from "../../hooks/useWindowSize"
 const Users = () => {
+
     const [users, setUsers] = useState<users[]>([])
     const [excelList, setList] = useState<object[]>([])
     const [emailList, setEmails] = useState('')
@@ -14,22 +15,25 @@ const Users = () => {
         getUsers()
             .then(r => {
                 setUsers(r.data)
-                const excel: object[] = []
-                users.forEach((u) => {
-                    const newUser = { "first name": u.firstName, "last Name": u.lastName, "email": u.email, "allow updates": u.receiveUpdates }
-                    excel.push(newUser)
-                })
-                setList(excel)
             })
-            .then(() => {
-                const usersEmailArr: string[] = []
-                users.forEach((u) => {
-                    usersEmailArr.push(u.email)
-                })
-                const emailString = usersEmailArr.join(' ')
-                setEmails(emailString)
-            })
-    }, [])
+    }, []);
+    useEffect(() => {
+        if (users.length > 0) {
+            // Process excelList
+            const excel = users.map(u => ({
+                "first name": u.firstName,
+                "last name": u.lastName,
+                "email": u.email,
+                "allow updates": u.receiveUpdates,
+            }));
+            setList(excel);
+
+            // Process emailList
+            const usersEmailArr = users.map(u => u.email);
+            const emailString = usersEmailArr.join(' ');
+            setEmails(emailString);
+        }
+    }, [users]);
     return (
         <section>
             <div className="px-10 w-full flex flex-col pt-4">

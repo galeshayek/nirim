@@ -43,3 +43,5 @@ export type users = {
     __v: number,
     _id: string
 }
+
+export type manager = { pass: string }

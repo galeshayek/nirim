@@ -8,16 +8,19 @@ import './translation/i18n';
 import LangProvider from './contexts/langContext.tsx'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import AuthProvider from './contexts/AuthContext.tsx'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <LangProvider>
-      <ThemeProvider>
-        <RouterProvider router={router} />
-      </ThemeProvider>
-    </LangProvider>
-    <ToastContainer autoClose={500} closeButton={false} position='top-center' />
+    <AuthProvider>
+      <LangProvider>
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </LangProvider>
+      <ToastContainer autoClose={500} closeButton={false} position='top-center' />
+    </AuthProvider>
   </React.StrictMode>,
 )

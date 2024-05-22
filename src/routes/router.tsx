@@ -7,6 +7,8 @@ import Health from "./Health";
 import Community from "./Community";
 import Infrastructure from "./Infrastructure";
 import ErrorEelement from "../components/ErrorElement";
+import ManagerLogin from "./ManagerLogin";
+import PrivateRoutes from "../components/PrivateRoute";
 
 export const router = createHashRouter([
   {
@@ -20,7 +22,11 @@ export const router = createHashRouter([
       },
       {
         path: '/users',
-        element: <Users />
+        element: <PrivateRoutes><Users /></PrivateRoutes>
+      },
+      {
+        path: '/managerlogin',
+        element: <ManagerLogin />
       },
       {
         path: '/educationalfacilities',
