@@ -33,3 +33,13 @@ export type EmailForm = {
 }
 
 export type sportCenterUl = { li: string, id: number }
+
+export type users = {
+    firstName: string,
+    lastName: string,
+    email: string,
+    phoneNumber: string,
+    receiveUpdates: boolean,
+    __v: number,
+    _id: string
+}

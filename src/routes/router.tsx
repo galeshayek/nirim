@@ -1,7 +1,7 @@
 import { createHashRouter } from "react-router-dom";
 import Root from "../layout/Root";
 import Home from "./Home";
-import Users from "./Users";
+import Users from "./Users/Users";
 import Educational from "./Educational";
 import Health from "./Health";
 import Community from "./Community";
