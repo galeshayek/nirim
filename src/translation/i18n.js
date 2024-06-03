@@ -129,13 +129,13 @@ i18n
                             "title": "",
                             "p": "Kai gave us the strength to fight. We knew we couldn't give up and had to do everything to save him. He is the hero who saved us and we won. They destroyed our house, burned everything we had. But they didn't take our lives. They came here with the aim of killing or kidnapping us but they failed!"
                         },
-                        "subtitle": "GOING BACK HOME TO REBUILD DREAMS AND LIVES",
+                        "subtitle": "TO REBUILD DREAMS AND LIVES",
                         "images": {
                             "alt": 'Image of the kibbutz after the attack'
                         }
                     },
                     "kibbutz": {
-                        "title": "Kibbutz Nirim returning home",
+                        "title": "GOING BACK HOME TO KIBBUTZ NIRIM",
                         "subtitle1": "A beacon of community and resilience.",
                         "subtitle2": "Returning Home",
                         "text": "The Kibbutz Nirim community has been shaped by decades of resilience and the cultivation of a strong community tradition, passed down through generations. We are currently focused on healing and rebuilding the community, but our thoughts and hearts are set on returning home to Kibbutz Nirim. To make this possible, we need to help the community recover from the crisis and rebuild their lives by creating designated spaces that serve as infrastructure for joint community activities, projects aimed at nurturing education, stimulating economic growth, and enhancing communal life, while also fostering a safe and supportive environment.",
