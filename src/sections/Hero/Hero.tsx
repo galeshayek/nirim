@@ -3,6 +3,7 @@ import photo from '../../assets/photosBefore/11.webp';
 import { useEffect, useRef, useState } from "react";
 import i18next from "i18next";
 import { useInterval } from 'react-use';
+import Title from "../../components/Title";
 
 const Hero = () => {
     const [hidden, sethidden] = useState('')
@@ -25,7 +26,8 @@ const Hero = () => {
 
     const { t } = useTranslation()
     return (<section dir={i18next.dir()} className="pt-10 flex flex-col justify-center items-center mx-3 md:mx-10 px-4 border-l-[2rem] border-pop">
-        <p className="text-lg pb-5"><span className="font-bold">{t('hero.subtitle')}</span>{t('hero.text')}</p>
+        <Title>{t('hero.title')}</Title>
+        <p className="text-lg pb-16 md:px-28 xl:px-44 px-4 leading-8 text-justify"><span className="font-bold">{t('hero.subtitle')}</span>{t('hero.text')}</p>
         <div className="relative w-full">
             <div className={`absolute ${hidden}`}>
                 <p className="text-white text-xl md:text-5xl md:scale-150 font-semibold absolute right-10 bottom-2 md:right-52 md:bottom-5">{t('hero.overlayText')}</p>

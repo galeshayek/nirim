@@ -19,7 +19,6 @@ const NavBar = () => {
     const { lang } = useContext(langContext);
     const { t } = useTranslation()
     const { i18n } = useTranslation();
-    // const { toggle, theme } = useContext(ThemeContext);
     useEffect(() => {
         document.documentElement.lang = lang
         console.log(i18n.language)
@@ -30,14 +29,14 @@ const NavBar = () => {
                 {t('header.nav2')}
             </a>
         </div>
-        <ul className='lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2 gap-5 lg:gap-0 *:text-xl ' dir={i18n.dir(lang)} >
+        <ul className=' lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2  *:text-2xl ' dir={i18n.dir(lang)} >
             <li><Link to={'/'}>{t('header.nav1')}</Link></li>
             <li><button onClick={needsSectionAnchor}>{t('header.nav2')}</button></li>
             <Menu placement="bottom">
                 <MenuButton>
                     {t('header.nav3')}
                 </MenuButton>
-                <MenuList className="text-textColor bg-oposite border-pop border-4 lg:border-t-0 p-2 rounded-b-md space-y-2">
+                <MenuList className="text-textColor  bg-oposite border-pop border-4 lg:border-t-0 p-2 rounded-b-md space-y-2">
                     <MenuItem className="hover:underline"><NavLink to={'/educationalfacilities'}>{t('needs.ul.li1.subtitle')}</NavLink></MenuItem>
                     <MenuItem className="hover:underline"><NavLink to={'/health'}>{t('needs.ul.li2.subtitle')}</NavLink></MenuItem>
                     <MenuItem className="hover:underline"><NavLink to={'/community'}>{t('needs.ul.li3.subtitle')}</NavLink></MenuItem>

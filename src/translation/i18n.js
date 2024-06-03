@@ -82,38 +82,60 @@ i18n
                         }
                     },
                     "hero": {
+                        "title": "About kibbutz Nirim",
                         "subtitle": "Kibbutz Nirim ",
                         "text": "Was first established on the eve of Yom Kippur in 1946 as part of David Ben Gurion's plan \"to settle the Negev with Jewish settlements and make the desert bloom\". Over the years, the kibbutz developed a vibrant community life and significant construction and development. Nirim's livelihood is based on its rich and varied field crops and plantations, dairy farm, and the organic farm, which is one of the largest and most prosperous in Israel. Despite living in a security-challenged area, the residents, pioneers in spirit, have dealt with the hardships of living on the border for years, all the while proudly farming the land “up to the border”.",
                         "src": "Https://www.youtube.com/embed/9fBMxYMt2vI",
                         "overlayText": "Kibbutz Nirim"
                     },
                     "afterOct": {
+                        "sectionTitle": "THE MASSACRE on KIBBUTZ NIRIM",
                         "title": "On the morning of October 7",
                         "p": " Hamas terrorists entered the kibbutz, setting homes on fire, shooting at civilians, and throwing grenades. For hours, the kibbutz was under siege, as most of the residents did all they could to hunker down in their saferooms and protect their families . During the terror attack, five people were brutally murdered, and another five were kidnapped and taken to Gaza. At the time of writing, two of them are still being held captive, their fates unknown. 3 IDF soldiers, including the commander of the southern brigade, that arrived at the kibbutz in the early morning to defend our community were killed in the battle. Their bodies were kidnapped to Gaza as well . The physical destruction is immense: 30 houses were completely destroyed by fire, 45 buildings and public areas were severely damaged, many infrastructures were destroyed. Over 60% of the kibbutz's agricultural land was completely burned.",
                         "testiTitle": "Quotes:",
                         "testi1": {
                             "title": "Barak L.",
-                            "p": "“My husband had his weapon pointed at the door. At this point the alarms and the explosions in the background were the least of our problems. I said to myself: ‘If they come in and shoot I will be my children's shield, I will protect them with my body.”"
+                            "p": "My husband had his weapon pointed at the door. At this point the alarms and the explosions in the background were the least of our problems. I said to myself: ‘If they come in and shoot I will be my children's shield, I will protect them with my body."
                         },
                         "testi2": {
                             "title": "Miriam M.",
-                            "p": "“I was alone in my house in the safe room, trying to understand what was going on, all the while thinking about my son.  He was at one of the parties in a wadi (dry riverbed) nearby. He managed to find bushes to hide in. Only after he was rescued, did he tell me that they had been hiding while the terrorists were in the fields around them on their motorcycles…”"
+                            "p": "I was alone in my house in the safe room, trying to understand what was going on, all the while thinking about my son.  He was at one of the parties in a wadi (dry riverbed) nearby. He managed to find bushes to hide in. Only after he was rescued, did he tell me that they had been hiding while the terrorists were in the fields around them on their motorcycles…"
                         },
                         "testi3": {
                             "title": "Yossi K.",
-                            "p": "“On Saturday morning I took my daughter's dog for a walk. We were on the way to the back gate to go out to the fields when the alarms started to go off. I ran to an old bomb shelter near the youth center and waited, but the alarms and the bombing didn’t let up. After about an hour I decided to run toward the houses and seek shelter in someone’s saferoom, but all the houses were locked and I couldn't get in…”"
+                            "p": "On Saturday morning I took my daughter's dog for a walk. We were on the way to the back gate to go out to the fields when the alarms started to go off. I ran to an old bomb shelter near the youth center and waited, but the alarms and the bombing didn’t let up. After about an hour I decided to run toward the houses and seek shelter in someone’s saferoom, but all the houses were locked and I couldn't get in…"
                         },
                         "testi4": {
                             "title": "Eldad H.",
-                            "p": "“My wife was reading the messages on the group text and we understood that we had to lock the safe room door, but the safe rooms have no locks. We heard noises in the house. I stood next to the door holding the handle, all this time praying that they don't come through the window because there is no lock on the window, either. Meanwhile my wife, with extraordinary resilience is calming my two year old son, holding him in one hand and in the other holding the phone, sending messages for help.”"
+                            "p": "My wife was reading the messages on the group text and we understood that we had to lock the safe room door, but the safe rooms have no locks. We heard noises in the house. I stood next to the door holding the handle, all this time praying that they don't come through the window because there is no lock on the window, either. Meanwhile my wife, with extraordinary resilience is calming my two year old son, holding him in one hand and in the other holding the phone, sending messages for help."
                         },
-                        "subtitle": "Despite the shock and pain, the terrorists did not break our spirit!",
+                        "testi5": {
+                            "title": "",
+                            "p": "Uriel, Amiee, Grandma Deborah, and the ten-day-old baby Kai were at the Labban-Tzarfati family home that Saturday morning. They had celebrated Kai's Brit Milah two days before."
+                        },
+                        "testi6": {
+                            "title": "uriel",
+                            "p": "We heard the terrorists breaking down the door of the house. We heard them from within the safe room speaking in Arabic, breaking and destroying the house. Then they tried to open the door of the saferoom. My wife and I held the handle with all our strength. At the same time, my mother-in-law was holding ten-day-old Kai in her hands, putting a finger in his mouth so he wouldn't cry, so they wouldn't hear him..."
+                        },
+                        "testi7": {
+                            "title": "",
+                            "p": "After a few minutes, the terrorists stopped trying to break through the door of the safe room and then we heard crackling sounds and started to smell the smoke. While we were fighting over the door handle, the frame apparently dislodged from the wall slightly and a little and a crack was created in the door, through which smoke began to flood the safe room. That was when we realized that they had set the house on fire."
+                        },
+                        "testi8": {
+                            "title": "",
+                            "p": "For six hours, my wife, my mother-in-law and I entered into a kind of \"game\". The smoke entered through the slot in the door of the safe room and every few minutes we carefully opened the protective metal window of the safe room, each in turn, brought ten-day-old Kai as near the opening of the window as w e dared, and breathed in a little air Every time we saw a terrorist near the window or heard gunshots, we quickly closed the window and ducked"
+                        },
+                        "testi9": {
+                            "title": "",
+                            "p": "Kai gave us the strength to fight. We knew we couldn't give up and had to do everything to save him. He is the hero who saved us and we won. They destroyed our house, burned everything we had. But they didn't take our lives. They came here with the aim of killing or kidnapping us but they failed!"
+                        },
+                        "subtitle": "GOING BACK HOME TO REBUILD DREAMS AND LIVES",
                         "images": {
-                            "alt": 'תמונה של הקיבוץ לאחר המתקפה'
+                            "alt": 'Image of the kibbutz after the attack'
                         }
                     },
                     "kibbutz": {
-                        "title": "Kibbutz Nirim",
+                        "title": "Kibbutz Nirim returning home",
                         "subtitle1": "A beacon of community and resilience.",
                         "subtitle2": "Returning Home",
                         "text": "The Kibbutz Nirim community has been shaped by decades of resilience and the cultivation of a strong community tradition, passed down through generations. We are currently focused on healing and rebuilding the community, but our thoughts and hearts are set on returning home to Kibbutz Nirim. To make this possible, we need to help the community recover from the crisis and rebuild their lives by creating designated spaces that serve as infrastructure for joint community activities, projects aimed at nurturing education, stimulating economic growth, and enhancing communal life, while also fostering a safe and supportive environment.",
@@ -333,6 +355,7 @@ i18n
                         },
                     },
                     hero: {
+                        title: "אודות קיבוץ נירים",
                         subtitle: 'קיבוץ נירים ',
                         text: `נוסד בשנת 1946, מהישובים הראשונים שהוקמו באזור הנגב המערבי, כחלק מחזון בן גוריון ליישב את הנגב ולהפריח את הדממה.
 נירים הוא ישוב חקלאי ומאז ומעולם החקלאות היוותה מקור הפרנסה העיקרי של הקהילה. בקיבוץ ענף גידולי שדה החולש על שטחים נרחבים, מטעי אבוקדו עתיקים ועשירים, חממות ורפת שהתוצרים וההישגים המקצועיים שלהם הם מהטובים בישראל ומשק אורגני מהגדולים במדינה.
@@ -342,34 +365,55 @@ i18n
                     },
 
                     afterOct: {
+                        sectionTitle: "הטבח בקיבוץ נירים",
                         title: 'בבוקר ה 7 באוקטובר ',
                         p: `פלשו לקיבוץ עשרות מחבלים ובמשך שעות ארוכות הם השתלטו על הקיבוץ, רצחו, חטפו, שרפו, השמידו ובזזו כל מה שנכרה בדרכם. התושבים נאבקו והגנו על בתיהם ועל משפחותיהם במשך שעות, בזמן שהמחבלים פרצו לבתים, ירו והשליכו רימונים.
 בטבח בנירים נרצחו 5 תושבים, 5 נחטפו מביתם, 2 מהם חטופים עדיין בידי החמאס.  ההרס הקהילתי והפיסי הוא עצום. 30 בתים נשרפו כליל, מבנים ושטחים ציבוריים רבים נהרסו, תשתיות רחבות הושמדו. כ-60% מהשטחים החקלאיים, אשר מהווים מקור הפרנסה העיקרי של הקיבוץ, נשרפו והושמדו. הקהילה נעקרה מביתה ונמצאת היום במעונה הזמני בבאר שבע.
 `,
-                        testiTitle: 'עדויות:',
+                        testiTitle: 'עדויות',
                         testi1: {
                             title: 'ברק ל.',
-                            p: "“בעלי מכוון את הנשק לכיוון הדלת  ,בשלב הזה האזעקות והדי הפיצוצים ברקע הם אחרון הבעיות שלנו, אני אומרת לעצמי שאם הם ייכנסו וירו , אני אגן על ילדי , אני אגן עליהם בגופי....”"
+                            p: "בעלי מכוון את הנשק לכיוון הדלת  ,בשלב הזה האזעקות והדי הפיצוצים ברקע הם אחרון הבעיות שלנו, אני אומרת לעצמי שאם הם ייכנסו וירו , אני אגן על ילדי , אני אגן עליהם בגופי...."
                         },
                         testi2: {
                             title: 'מרים מ.',
-                            p: '“אני לבד בבית בממ"ד, מנסה להבין מה קורה, כל הזמן הזה חושבת על בני שהלך לאחת המסיבות, אני יודעת שהוא מצא מקום מסתור אבל רק אחרי שהתאחדנו הוא סיפר לי שבמקום מוחבא הסתובבו המחבלים סביבם על האופנועים.”'
+                            p: 'אני לבד בבית בממ"ד, מנסה להבין מה קורה, כל הזמן הזה חושבת על בני שהלך לאחת המסיבות, אני יודעת שהוא מצא מקום מסתור אבל רק אחרי שהתאחדנו הוא סיפר לי שבמקום מוחבא הסתובבו המחבלים סביבם על האופנועים.'
                         },
                         testi3: {
                             title: 'יוסי ק.',
-                            p: '“ביום שבת בבוקר לקחתי את הכלב של הבת לטיול, היינו בדרך לכיוון השער האחורי כדי לצאת לשדות כאשר התחילו האזעקות. רצתי לתפוס מחסה באזור של מקלט ישן ליד מועדון הנעורים וחיכתי , אבל האזעקות והדי הפיצוצים לא פסקו. לאחר בערך שעה , החלטתי לרוץ לכיוון הבתים במטרה להיכנס לאחד מהם לממ"ד. כל הבתים היו נעולים.....”'
+                            p: 'ביום שבת בבוקר לקחתי את הכלב של הבת לטיול, היינו בדרך לכיוון השער האחורי כדי לצאת לשדות כאשר התחילו האזעקות. רצתי לתפוס מחסה באזור של מקלט ישן ליד מועדון הנעורים וחיכתי , אבל האזעקות והדי הפיצוצים לא פסקו. לאחר בערך שעה , החלטתי לרוץ לכיוון הבתים במטרה להיכנס לאחד מהם לממ"ד. כל הבתים היו נעולים.....'
                         },
                         testi4: {
                             title: 'אלדד ה.',
-                            p: '“אשתי קוראת את ההודעות בקבוצה של הקיבוץ בנייד, אנחנו מבינים שאנחנו צריכים לנעול את עצמנו בממ"ד, אבל אין לדלת מנעול , ואנחנו שומעים קולות בתוך הבית. אני עומד ליד הדלת, מחזיק בידית ומתפלל שהם לא ייכנסו דרך החלון. בינתיים אשתי עם כוחות ותושייה רבה מרגיעה את בני בן השנתיים ובאותו זמן שולחות הודעות מצוקה ומבקשת עזרה.”'
+                            p: 'אשתי קוראת את ההודעות בקבוצה של הקיבוץ בנייד, אנחנו מבינים שאנחנו צריכים לנעול את עצמנו בממ"ד, אבל אין לדלת מנעול , ואנחנו שומעים קולות בתוך הבית. אני עומד ליד הדלת, מחזיק בידית ומתפלל שהם לא ייכנסו דרך החלון. בינתיים אשתי עם כוחות ותושייה רבה מרגיעה את בני בן השנתיים ובאותו זמן שולחות הודעות מצוקה ומבקשת עזרה.'
                         },
-                        subtitle: 'חוזרים הביתה, בונים עתיד, זורעים תקווה',
+                        "testi5": {
+                            "title": "",
+                            "p": "בבית משפחת לבן - צרפתי היו בבית באותה שבת אבא אוריאל, אמא איימי, סבתא דבורה וקאי התינוק בן העשרה ימים. יומיים לפני כן נערך ברית המילה שלו בקיבוץ."
+                        },
+                        "testi6": {
+                            "title": "אוריאל",
+                            "p": `שמענו את המחבלים פורצים את הדלת של הבית. שמענו אותם מהממ"ד מדברים בערבית, שוברים והורסים את הבית.ואז הם ניסו לפתוח את דלת הממ"ד. אשתי ואני החזקנו בידית בכל הכוח. באותו זמן חמותי החזיקה את אוריאל בן העשרה ימים בידים, שמה לו אצבע בפה כדי שלא יבכה, כדי שלא ישמעו אותו...`
+                        },
+                        "testi7": {
+                            "title": "",
+                            "p": `לאחר כמה דקות המחבלים הפסיקו לנסות לפרוץ את דלת הממ"ד ואז שמענו קולות של פצפוצים והתחלנו להריח את העשן. בזמן שנלחמנו על ידית הדלת, המסגרת ככל הנראה זזה מעט ונוצר חריץ בדלת, דרכו התחיל להיכנס עשן לממ"ד. ואז הבנו שהם הציתו את הבית`
+                        },
+                        "testi8": {
+                            "title": "",
+                            "p": `במשך שש שעות אשתי, חמותי ואני נכנסנו למעין "משחק". העשן נכנס דרך חריץ הדלת בממ"ד ובכל כמה דקות פתחנו בזהירות מעט את חלון המתכת של הממ"ד,  כל אחד בתורו, קירבנו את אוריאל בן העשרה ימים לחלון ונשמנו מעט אויר. בכל פעם שראינו מחבל ליד החלון או שמענו יריות סגרנו מהר את החלון והתכופפנו`
+                        },
+                        "testi9": {
+                            "title": "",
+                            "p": `קאי נתן לנו את הכוח להילחם. ידענו שאנחנו לא יכולים לוותר וצריכים לעשות הכל כדי להציל אותו. הוא הגיבור שהציל אותנו ואנחנו ניצחנו. הם הרסו לנו את הבית, שרפו את כל מה שהיה לנו. אבל הם לא לקחו לנו את החיים. הם באו לפה במטרה להרוג או לחטוף אותנו והם לא הצליחו. אנחנו ניצנו! ואני מחכה לרגע שבו נוכל לחזור לנירים לבנות את הבית מחדש`
+                        },
+                        subtitle: ' בונים עתיד, זורעים תקווה',
                         images: {
                             alt: 'תמונה של הקיבוץ לאחר המתקפה'
                         }
                     },
                     kibbutz: {
-                        title: 'קיבוץ נירים',
+                        title: 'חוזרים הביתה לנירים',
                         subtitle1: 'מגדלור של קהילה וחוסן.',
                         subtitle2: 'חוזרים הביתה',
                         text: `החוסן והצביון של קהילת נירים הושרשו על ידי דור המייסדים והועברו במהלך השנים לדורות הצעירים, אשר חונכו תחת ערכים של אהבת הארץ, אחדות וערבות הדדית.
@@ -379,26 +423,26 @@ i18n
                         photoAlt: 'שדה פרחים בקיבוץ'
                     },
                     needs: {
-                        title: 'פרוייקטים',
-                        subtitle: 'שיקום קיבוץ נירים: פרויקטים מרכזיים בפיתוח',
+                        title: 'מה אנחנו צריכים',
+                        subtitle: 'תרומתכם תסייע לנו לקדם מיזמים שיאפשרו לקהילת נירים לבנות את חייהם מחדש',
                         ul: {
                             li1: {
-                                subtitle: 'בתחום החינוך: ',
-                                text: 'הקמת תשתיות שייצרו סביבת התפתחות ולמידה תומכת, יצירתית, חדשנית ומטפחת:',
+                                subtitle: 'חינוך:',
+                                text: ' הקמת תשתיות שייצרו סביבת התפתחות ולמידה תומכת, יצירתית, חדשנית ומטפחת:',
                             },
                             li2: {
-                                subtitle: 'בתחום בריאות ושיקום הגוף והנפש: ',
-                                text: 'הקמת מערכי תמיכה עם תכניות טיפוליות ומרכז ספורט חדש, שיאפשרו שיקום פיזי ורגשי לחברי הקיבוץ',
+                                subtitle: 'בריאות ושיקום הגוף והנפש:',
+                                text: ' הקמת מערכי תמיכה עם תכניות טיפוליות ומרכז ספורט חדש, שיאפשרו שיקום פיזי ורגשי לחברי הקיבוץ',
                             },
                             li3: {
-                                subtitle: 'שיקום קהילתי: ',
+                                subtitle: 'שיקום קהילתי:',
                                 text: 'הקמת תשתיות ומרחבים שיאפשרו מפגשים ופעילויות קהילתיות בסביבה בטוחה ונעימה ויעניקו לקהילה את האפשרות לייצר שוב אינטראקציות קהילתיות וחוויות מעצימות',
                             },
                             li4: {
                                 subtitle: 'בתחום העסקי: ',
                                 text: 'הקמה והרחבה של תשתיות ומיזמים עסקיים לחיזוק החוסן הכלכלי של הקיבוץ ויצירת תשתית כלכלית איתנה לעתיד קהילת נירים',
                             },
-                            link: 'לעוד מידע... '
+                            link: 'מידע נוסף... '
                         },
                     },
                     cta: {

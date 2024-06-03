@@ -5,7 +5,7 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Root = () => {
     return (
-        <div className='bg-base text-textColor'>
+        <div className='bg-amber-50/50 text-textColor'>
             <ScrollToTop />
             <Header />
             <main>

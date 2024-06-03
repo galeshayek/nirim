@@ -12,7 +12,6 @@ import i18next from "i18next";
 const TestimonialSlider = () => {
     const [boolean, setBoolean] = useState(true)
     const { width } = useWindowSize()
-
     useEffect(() => {
         if (width >= 768) {
             setBoolean(true)
@@ -20,6 +19,18 @@ const TestimonialSlider = () => {
             setBoolean(false)
         }
     }, [width])
+
+    const testimonials = [
+        'testi1',
+        'testi2',
+        'testi3',
+        'testi4',
+        'testi5',
+        'testi6',
+        'testi7',
+        'testi8',
+        'testi9'
+    ];
 
     const { t } = useTranslation()
     const settings = {
@@ -35,13 +46,15 @@ const TestimonialSlider = () => {
         arrows: boolean
     };
     return (
-        <div dir={i18next.dir()} className=" w-[85vw] md:w-8/12 md:py-4">
-            <h3 className=" text-3xl text-center border-b-2 w-fit mx-auto border-slate-700">{t('afterOct.testiTitle')}</h3>
+        <div dir={i18next.dir()} className="w-[85vw] md:w-8/12 md:py-0 -mt-8">
             <Slider {...settings}>
-                <Testimonial title={t('afterOct.testi1.title')} text={t('afterOct.testi1.p')} />
-                <Testimonial title={t('afterOct.testi2.title')} text={t('afterOct.testi2.p')} />
-                <Testimonial title={t('afterOct.testi3.title')} text={t('afterOct.testi3.p')} />
-                <Testimonial title={t('afterOct.testi4.title')} text={t('afterOct.testi4.p')} />
+                {testimonials.map((testi, index) => (
+                    <Testimonial
+                        key={index}
+                        title={t(`afterOct.${testi}.title`)}
+                        text={t(`afterOct.${testi}.p`)}
+                    />
+                ))}
             </Slider>
         </div>
     )

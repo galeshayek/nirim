@@ -20,7 +20,7 @@ const Header = () => {
 
     if (width >= 1024) {
         return (
-            <header className="bg-primary grid grid-cols-3 px-10 h-16 sticky z-10 top-0 w-screen">
+            <header className="bg-primary grid px-10 h-16 sticky z-10 top-0 w-screen">
                 <NavBar />
             </header >
         )
