@@ -189,7 +189,7 @@ i18n
                             "youthClab": {
                                 "title": "Youth Club",
                                 "text1": "After the existing structure was infiltrated and severely damaged by the terrorists on October 7th, our teens’ club needs to be restored, expanded and upgraded.",
-                                "budget": "      Total Budget Project: $1,000,000"
+                                "budget": "      Total Budget Project: $300,000"
                             }
                         },
                         "health": {
@@ -470,7 +470,7 @@ i18n
                             youthClab: {
                                 title: 'בניית מועדון נוער:',
                                 text1: ' בית הנוער הישן של הקיבוץ נפגע מפגיעות פצמ"רים ומועמד להריסה',
-                                budget: 'תקציב נדרש לבנית מועדון נוער חדש: $1,000,000',
+                                budget: 'תקציב נדרש לבנית מועדון נוער חדש: $300,000',
                             },
                         },
                         health: {
