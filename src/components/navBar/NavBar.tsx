@@ -1,13 +1,15 @@
+import "./navbar.css";
+
 import { useContext, useEffect } from "react";
 // import { ThemeContext } from "../contexts/ThemeContext";
 // import { BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
-import { langContext } from "../contexts/langContext";
+import { langContext } from "../../contexts/langContext";
 import { Link, NavLink } from "react-router-dom";
-import { footerSectionAnchor, needsSectionAnchor } from "../services/ancors";
+import { footerSectionAnchor, needsSectionAnchor } from "../../services/ancors";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import LangBtn from "./LangBtn";
+import LangBtn from "../LangBtn";
 
 const NavBar = () => {
   const { lang } = useContext(langContext);
@@ -16,23 +18,22 @@ const NavBar = () => {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    console.log(i18n.language);
   }, [lang]);
 
   return (
     <>
-      <div className=" max-lg:hidden self-center max-lg:text-center max-lg:pb-4 lg:pl-10">
+      <div className=" max-lg:hidden self-end pb-3 max-lg:text-center max-lg:pb-4 lg:pl-10">
         <a
           href={t("donation.link")}
           target="_blank"
           rel="noreferrer noopener"
-          className="bg-pop text-xl px-3 py-1 rounded-md"
+          className="bg-pop text-lg px-3 py-2 rounded-md"
         >
           {t("header.nav2")}
         </a>
       </div>
       <ul
-        className=" lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2  *:text-2xl "
+        className=" lg:col-start-2 lg:col-end-2 flex lg:flex-row flex-col lg:text-oposite text-textColor justify-between items-center lg:items-end lg:pb-2  md:*:text-lg *:text-xl "
         dir={i18n.dir(lang)}
       >
         <li>
@@ -63,13 +64,24 @@ const NavBar = () => {
             </MenuItem>
           </MenuList>
         </Menu>
+
         <li>
           <button onClick={footerSectionAnchor}>{t("header.nav4")}</button>
+        </li>
+
+        <li>
+          <a
+            className="gradient"
+            href="https://www.peach-in.com/cmp/Kibbutz-Nirim"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {t("header.nav5")}
+          </a>
         </li>
       </ul>
       <div className="lg:flex hidden gap-2 col-start-3 col-end-4 justify-end items-center">
         <LangBtn />
-        {/* <button className="hover:bg-base/30 p-2 rounded text-2xl" onClick={() => toggle()}>{theme == 'light' ? <BiSun /> : <BiMoon />}</button> */}
       </div>
     </>
   );

@@ -19,6 +19,12 @@ i18n
     resources: {
       en: {
         translation: {
+          popUp: {
+            title: "Purchase of Nirim children's postcards",
+            description:
+              "Purchase our magical postcards and be a part of Nirim's revival and growth process",
+            button: "The postcards website",
+          },
           donation: {
             link: "https://my.israelgives.org/en/fundme/Nirim",
           },
@@ -32,6 +38,7 @@ i18n
             nav2: "Donate",
             nav3: "Projects",
             nav4: "Contact",
+            nav5: "postcards",
           },
           footer: {
             contact: {
@@ -315,6 +322,12 @@ i18n
       },
       he: {
         translation: {
+          popUp: {
+            title: "רכישת גלויות ילדי נירים",
+            description:
+              "רכשו את המארזים הקסומים שלנו והיו שותפים לתהליך התקומה והצמיחה של נירים",
+            button: "לאתר הגלויות",
+          },
           donation: {
             link: "https://my.israelgives.org/he/fundme/Nirim",
           },
@@ -328,6 +341,7 @@ i18n
             nav2: "לתרומה",
             nav3: "פרוייקטים",
             nav4: "צור קשר",
+            nav5: "גלויות",
           },
           footer: {
             contact: {
