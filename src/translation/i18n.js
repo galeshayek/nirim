@@ -90,7 +90,7 @@ i18n
           afterOct: {
             sectionTitle: "THE MASSACRE on KIBBUTZ NIRIM",
             title: "On the morning of October 7",
-            p: " Hamas terrorists entered the kibbutz, setting homes on fire, shooting at civilians, and throwing grenades. For hours, the kibbutz was under siege, as most of the residents did all they could to hunker down in their saferooms and protect their families . During the terror attack, five people were brutally murdered, and another five were kidnapped and taken to Gaza. At the time of writing, two of them are still being held captive, their fates unknown. 3 IDF soldiers, including the commander of the southern brigade, that arrived at the kibbutz in the early morning to defend our community were killed in the battle. Their bodies were kidnapped to Gaza as well . The physical destruction is immense: 30 houses were completely destroyed by fire, 45 buildings and public areas were severely damaged, many infrastructures were destroyed. Over 60% of the kibbutz's agricultural land was completely burned.",
+            p: " Hamas terrorists entered the kibbutz, setting homes on fire, shooting at civilians, and throwing grenades. For hours, the kibbutz was under siege, as most of the residents did all they could to hunker down in their saferooms and protect their families . During the terror attack, In the aftermath, five people were brutally murdered, and another five were kidnapped and taken to Gaza. 3 of our hostages were released. Tragically, two hostages were declared as having been murdered by their captors. The IDF retrieved their bodies to be interred in our cemetery on Kibbutz Nirim. 4 IDF soldiers, including the commander of the southern brigade, that arrived at the kibbutz in the early morning to defend our community were killed in the battle. Their bodies were kidnapped to Gaza as well . The physical destruction is immense: 30 houses were completely destroyed by fire, 45 buildings and public areas were severely damaged, many infrastructures were destroyed. Over 60% of the kibbutz's agricultural land was completely burned.",
             testiTitle: "Quotes:",
             testi1: {
               title: "Barak L.",
@@ -389,9 +389,7 @@ i18n
           afterOct: {
             sectionTitle: "הטבח בקיבוץ נירים",
             title: "בבוקר ה 7 באוקטובר ",
-            p: `פלשו לקיבוץ עשרות מחבלים ובמשך שעות ארוכות הם השתלטו על הקיבוץ, רצחו, חטפו, שרפו, השמידו ובזזו כל מה שנקרה בדרכם. התושבים נאבקו והגנו על בתיהם ועל משפחותיהם במשך שעות, בזמן שהמחבלים פרצו לבתים, ירו והשליכו רימונים.
-בטבח בנירים נרצחו 5 תושבים, 5 נחטפו מביתם, 2 מהם חטופים עדיין בידי החמאס.  ההרס הקהילתי והפיסי הוא עצום. 30 בתים נשרפו כליל, מבנים ושטחים ציבוריים רבים נהרסו, תשתיות רחבות הושמדו. כ-60% מהשטחים החקלאיים, אשר מהווים מקור הפרנסה העיקרי של הקיבוץ, נשרפו והושמדו. הקהילה נעקרה מביתה ונמצאת היום במעונה הזמני בבאר שבע.
-`,
+            p: "פלשו לקיבוץ עשרות מחבלים ובמשך שעות ארוכות הם השתלטו על הקיבוץ, רצחו, חטפו, שרפו, השמידו ובזזו כל מה שנקרה בדרכם. התושבים נאבקו והגנו על בתיהם ועל משפחותיהם במשך שעות, בזמן שהמחבלים פרצו לבתים, ירו והשליכו רימונים. בטבח בנירים ב7 באוקטובר נרצחו 5 תושבים, 5 נחטפו מביתם. 3 שוחררו במהלך חודש נובמבר. לצערנו הרב 2 חברים נרצחו בשבי, גופותיהם חולצו על ידי חיילי צה״ל והושבו לקבורה בקיבוץ. בנוסף, 4 לוחמים נפלו באותו יום בקיבוץ נירים בקרב שניהלו מול מחבלי החמאס על הגנת הקיבוץ והקהילה. גופותיהם נחטפו לעזה. ההרס הקהילתי והפיסי הוא עצום. 30 בתים נשרפו כליל, מבנים ושטחים ציבוריים רבים נהרסו, תשתיות רחבות הושמדו. כ-60% מהשטחים החקלאיים, אשר מהווים מקור הפרנסה העיקרי של הקיבוץ, נשרפו והושמדו. הקהילה נעקרה מביתה ונמצאת היום במעונה הזמני בבאר שבע.",
             testiTitle: "עדויות",
             testi1: {
               title: "ברק ל.",
