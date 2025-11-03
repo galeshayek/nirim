@@ -1,12 +1,10 @@
 import { useTranslation } from "react-i18next"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 import heLogo from '../assets/logo/hebrew.png'
 import enLogo from '../assets/logo/english.png'
 import bth from '../assets/logo/bth.webp'
 import { useContext } from "react"
 import { langContext } from "../contexts/langContext"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import useWindowSize from "../hooks/useWindowSize"
 import BeforeSlider from "../components/BeforeSlider"
 import BeforeSliderMobile from "../components/BeforeSliderMobile"

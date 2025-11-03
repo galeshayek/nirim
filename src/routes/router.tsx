@@ -1,32 +1,21 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router";
 import Root from "../layout/Root";
 import Home from "./Home";
-import Users from "./Users/Users";
 import Educational from "./Educational";
 import Health from "./Health";
 import Community from "./Community";
 import Infrastructure from "./Infrastructure";
-import ErrorEelement from "../components/ErrorElement";
-import ManagerLogin from "./ManagerLogin";
-import PrivateRoutes from "../components/PrivateRoute";
+import ErrorElement from "../components/ErrorElement";
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorEelement />,
+    errorElement: <ErrorElement />,
     children: [
       {
         index: true,
         element: <Home />,
-      },
-      {
-        path: '/users',
-        element: <PrivateRoutes><Users /></PrivateRoutes>
-      },
-      {
-        path: '/managerlogin',
-        element: <ManagerLogin />
       },
       {
         path: '/educationalfacilities',
@@ -46,5 +35,4 @@ export const router = createHashRouter([
       },
     ],
   },
-]
-);
+]);

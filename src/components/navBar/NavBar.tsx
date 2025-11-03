@@ -1,14 +1,14 @@
-import "./navbar.css";
-
 import { useContext, useEffect } from "react";
-// import { ThemeContext } from "../contexts/ThemeContext";
-// import { BiMoon, BiSun } from "react-icons/bi";
 import { useTranslation } from "react-i18next";
 import { langContext } from "../../contexts/langContext";
-import { Link, NavLink } from "react-router-dom";
-import { footerSectionAnchor, needsSectionAnchor } from "../../services/ancors";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
-import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Link, NavLink } from "react-router";
+import { footerSectionAnchor, needsSectionAnchor } from "../../lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import LangBtn from "../LangBtn";
 
 const NavBar = () => {
@@ -42,28 +42,33 @@ const NavBar = () => {
         <li>
           <button onClick={needsSectionAnchor}>{t("header.nav2")}</button>
         </li>
-        <Menu placement="bottom">
-          <MenuButton>{t("header.nav3")}</MenuButton>
-          <MenuList className="text-textColor  bg-oposite border-pop border-4 lg:border-t-0 p-2 rounded-b-md space-y-2">
-            <MenuItem className="hover:underline">
-              <NavLink to={"/educationalfacilities"}>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button>{t("header.nav3")}</button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="text-textColor bg-oposite border-pop lg:border-t-0 p-2 rounded-b-md">
+            <DropdownMenuItem asChild>
+              <NavLink to={"/educationalfacilities"} className="hover:underline">
                 {t("needs.ul.li1.subtitle")}
               </NavLink>
-            </MenuItem>
-            <MenuItem className="hover:underline">
-              <NavLink to={"/health"}>{t("needs.ul.li2.subtitle")}</NavLink>
-            </MenuItem>
-            <MenuItem className="hover:underline">
-              <NavLink to={"/community"}>{t("needs.ul.li3.subtitle")}</NavLink>
-            </MenuItem>
-
-            <MenuItem className="hover:underline">
-              <NavLink to={"/infrastructure"}>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <NavLink to={"/health"} className="hover:underline">
+                {t("needs.ul.li2.subtitle")}
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <NavLink to={"/community"} className="hover:underline">
+                {t("needs.ul.li3.subtitle")}
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <NavLink to={"/infrastructure"} className="hover:underline">
                 {t("needs.ul.li4.subtitle")}
               </NavLink>
-            </MenuItem>
-          </MenuList>
-        </Menu>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
 
         <li>
           <button onClick={footerSectionAnchor}>{t("header.nav4")}</button>

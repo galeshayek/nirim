@@ -1,12 +1,24 @@
-import i18next from "i18next"
-import { FCC } from "../@types/types"
+import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import i18next from "i18next";
 
-const ProjectCard: FCC = ({ children }) => {
-    return (
-        <div dir={i18next.dir()} className="bg-primary/25 text-center flex flex-col items-center gap-2 p-3 rounded-lg">
-            {children}
-        </div>
-    )
+interface ProjectCardProps {
+  children: ReactNode;
+  className?: string;
 }
 
-export default ProjectCard
+const ProjectCard = ({ children, className }: ProjectCardProps) => {
+  return (
+    <div
+      dir={i18next.dir()}
+      className={cn(
+        "bg-primary/25 text-center flex flex-col items-center gap-2 p-6 rounded-lg border",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default ProjectCard;

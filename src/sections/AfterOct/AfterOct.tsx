@@ -1,6 +1,4 @@
 import { useTranslation } from "react-i18next";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import AfterSlider from "../../components/AfterSlider";
 import TestimonialSlider from "../../components/Tesrimonials/TestimonialSlider";
 import i18next from "i18next";

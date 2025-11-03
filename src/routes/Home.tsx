@@ -1,4 +1,3 @@
-import PopUp from "../components/navBar/PopUp";
 import AfterOct from "../sections/AfterOct/AfterOct";
 import Hero from "../sections/Hero/Hero";
 import Kibbutz from "../sections/Kibbutz";
@@ -10,7 +9,6 @@ const Home = () => {
       <AfterOct />
       <Kibbutz />
       <Needs />
-      <PopUp />
     </div>
   );
 };

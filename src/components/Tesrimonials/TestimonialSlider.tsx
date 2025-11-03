@@ -1,63 +1,70 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import Testimonial from "./Testimonial";
-import NextArrow from "./NextArrow";
-import PrevArrow from "./PrevArrow";
-import './testimonialSlider.scss';
 import useWindowSize from "../../hooks/useWindowSize";
 import { useEffect, useState } from "react";
 import i18next from "i18next";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const TestimonialSlider = () => {
-    const [boolean, setBoolean] = useState(true)
-    const { width } = useWindowSize()
-    useEffect(() => {
-        if (width >= 768) {
-            setBoolean(true)
-        } else {
-            setBoolean(false)
-        }
-    }, [width])
+  const [showArrows, setShowArrows] = useState(true);
+  const { width } = useWindowSize();
 
-    const testimonials = [
-        'testi1',
-        'testi2',
-        'testi3',
-        'testi4',
-        'testi5',
-        'testi6',
-        'testi7',
-        'testi8',
-        'testi9'
-    ];
+  useEffect(() => {
+    if (width >= 768) {
+      setShowArrows(true);
+    } else {
+      setShowArrows(false);
+    }
+  }, [width]);
 
-    const { t } = useTranslation()
-    const settings = {
-        dots: boolean,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 8000,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
-        arrows: boolean
-    };
-    return (
-        <div dir={i18next.dir()} className="w-[85vw] md:w-8/12 md:py-0 -mt-8">
-            <Slider {...settings}>
-                {testimonials.map((testi, index) => (
-                    <Testimonial
-                        key={index}
-                        title={t(`afterOct.${testi}.title`)}
-                        text={t(`afterOct.${testi}.p`)}
-                    />
-                ))}
-            </Slider>
-        </div>
-    )
-}
+  const testimonials = [
+    'testi1',
+    'testi2',
+    'testi3',
+    'testi4',
+    'testi5',
+    'testi6',
+    'testi7',
+    'testi8',
+    'testi9'
+  ];
 
-export default TestimonialSlider
+  const { t } = useTranslation();
+
+  return (
+    <div dir={i18next.dir()} className="w-[85vw] md:w-8/12 md:py-0 -mt-8">
+      <Carousel
+        opts={{
+          align: "start" as const,
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {testimonials.map((testi, index) => (
+            <CarouselItem key={index}>
+              <Testimonial
+                title={t(`afterOct.${testi}.title`)}
+                text={t(`afterOct.${testi}.p`)}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {showArrows && (
+          <>
+            <CarouselPrevious />
+            <CarouselNext />
+          </>
+        )}
+      </Carousel>
+    </div>
+  );
+};
+
+export default TestimonialSlider;

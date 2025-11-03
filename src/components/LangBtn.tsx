@@ -1,5 +1,10 @@
-import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { FaGlobe } from "react-icons/fa";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Globe } from "lucide-react";
 import { lngs } from "../translation/lngs";
 import { useContext } from "react";
 import { langContext } from "../contexts/langContext";
@@ -9,28 +14,28 @@ const LangBtn = () => {
   const { updateLang } = useContext(langContext);
   const { i18n } = useTranslation();
   return (
-    <Menu placement="bottom">
-      <MenuButton className="p-2 h-fit text-xl bg-oposite rounded">
-        <FaGlobe />
-      </MenuButton>
-      <MenuList className="text-textColor bg-oposite  p-2 rounded-md space-y-2 shadow-2xl">
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button className="p-2 h-fit text-xl bg-oposite rounded">
+          <Globe />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="text-textColor bg-oposite">
         {Object.keys(lngs).map((lng) => {
           return (
-            <MenuItem key={lngs[lng].code}>
-              <p
-                className="p-1"
-                key={lng}
-                onClick={() => {
-                  i18n.changeLanguage(lng), updateLang(lng);
-                }}
-              >
-                {lngs[lng].nativeName}
-              </p>
-            </MenuItem>
+            <DropdownMenuItem
+              key={lngs[lng].code}
+              onClick={() => {
+                i18n.changeLanguage(lng);
+                updateLang(lng);
+              }}
+            >
+              {lngs[lng].nativeName}
+            </DropdownMenuItem>
           );
         })}
-      </MenuList>
-    </Menu>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
 

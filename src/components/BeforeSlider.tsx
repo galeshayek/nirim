@@ -1,52 +1,62 @@
-import { useTranslation } from "react-i18next"
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick-theme.css"
-import "slick-carousel/slick/slick.css"
-import { images1, images2, images3 } from "../services/beforeImages"
+import { useTranslation } from "react-i18next";
+import { images1, images2, images3 } from "../lib/beforeImages";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const BeforeSlider = () => {
-    const { t } = useTranslation()
+  const { t } = useTranslation();
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        fade: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 3000,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-        arrows: false,
-    }
+  const autoplaySettings = {
+    align: "start" as const,
+    loop: true,
+  };
 
-    return (
-        <>
-            <div className="flex flex-col gap-3 ">
-                <div>
-                    <Slider {...settings}>
-                        {images1.map((img) => (
-                            <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
-                        ))}
-                    </Slider>
-                </div>
-                <div>
-                    <Slider {...settings}>
-                        {images2.map((img) => (
-                            <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
-                        ))}
-                    </Slider>
-                </div>
-                <div>
-                    <Slider {...settings}>
-                        {images3.map((img) => (
-                            <img className="aspect-square rounded-lg" key={img.id} src={img.src} alt={t('afterOct.images.alt')} />
-                        ))}
-                    </Slider>
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <div className="flex flex-col gap-3">
+      <Carousel opts={autoplaySettings} className="w-full">
+        <CarouselContent>
+          {images1.map((img) => (
+            <CarouselItem key={img.id}>
+              <img
+                className="aspect-square rounded-lg w-full"
+                src={img.src}
+                alt={t('afterOct.images.alt')}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      <Carousel opts={autoplaySettings} className="w-full">
+        <CarouselContent>
+          {images2.map((img) => (
+            <CarouselItem key={img.id}>
+              <img
+                className="aspect-square rounded-lg w-full"
+                src={img.src}
+                alt={t('afterOct.images.alt')}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      <Carousel opts={autoplaySettings} className="w-full">
+        <CarouselContent>
+          {images3.map((img) => (
+            <CarouselItem key={img.id}>
+              <img
+                className="aspect-square rounded-lg w-full"
+                src={img.src}
+                alt={t('afterOct.images.alt')}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </div>
+  );
+};
 
-export default BeforeSlider
+export default BeforeSlider;

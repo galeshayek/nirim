@@ -1,19 +1,19 @@
-const flowbite = require("flowbite-react/tailwind");
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: ["class"],
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primary: 'rgba(var(--primary))',
-        complimantry: 'rgba(var(--complimantry))',
-        pop: 'rgba(var(--pop))',
-        oposite: 'rgba(var(--oposite))',
-        textColor: 'rgba(var(--text))',
+        primary: 'rgba(var(--primary), <alpha-value>)',
+        complimantry: 'rgba(var(--complimantry), <alpha-value>)',
+        pop: 'rgba(var(--pop), <alpha-value>)',
+        oposite: 'rgba(var(--oposite), <alpha-value>)',
+        text: 'rgba(var(--text), <alpha-value>)',
       },
       fontSize: {
         sm: 'clamp(0.8rem, 1vw, 1.3rem)',
@@ -29,4 +29,6 @@ export default {
   },
   plugins: [],
 }
+
+export default config
 

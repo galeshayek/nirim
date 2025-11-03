@@ -1,23 +1,21 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import NavBar from "../components/navBar/NavBar";
 import useWindowSize from "../hooks/useWindowSize";
 
 import {
   Drawer,
-  DrawerBody,
-  DrawerOverlay,
+  DrawerClose,
   DrawerContent,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { BiMenu } from "react-icons/bi";
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Menu } from "lucide-react";
 import LangBtn from "../components/LangBtn";
 import { t } from "i18next";
 
 const Header = () => {
   const { width } = useWindowSize();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef<HTMLButtonElement>(null);
   const [index, setindex] = useState("z-10");
+  const [open, setOpen] = useState(false);
 
   if (width >= 1024) {
     return (
@@ -30,32 +28,22 @@ const Header = () => {
       <header
         className={`${index} bg-primary sticky top-0 translate-y-0 py-4 pl-4 flex justify-between pr-10`}
       >
-        <button
-          ref={btnRef}
-          onClick={() => {
-            onOpen(), setindex("");
-          }}
-        >
-          <BiMenu className="text-3xl text-oposite" />
-        </button>
-        <Drawer
-          isOpen={isOpen}
-          placement="top"
-          onClose={onClose}
-          finalFocusRef={btnRef}
-          blockScrollOnMount={false}
-        >
-          <DrawerOverlay
-            onClick={() => {
-              onClose(), setindex("z-10");
-            }}
-          />
+        <Drawer open={open} onOpenChange={setOpen}>
+          <DrawerTrigger asChild>
+            <button
+              onClick={() => {
+                setOpen(true);
+                setindex("");
+              }}
+            >
+              <Menu className="text-3xl text-oposite" />
+            </button>
+          </DrawerTrigger>
           <DrawerContent>
-            <DrawerBody>
-              <div className="bg-oposite border-b-4 border-pop py-3 z-20">
-                <NavBar />
-              </div>
-            </DrawerBody>
+            <DrawerClose />
+            <div className="bg-oposite border-b-4 border-pop py-3 z-20">
+              <NavBar />
+            </div>
           </DrawerContent>
         </Drawer>
         <div className="lg:hidden self-center text-center">
